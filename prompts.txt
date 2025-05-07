@@ -1,0 +1,83 @@
+Create a sleek, modern landing page for a company called "AI Swiss Knife". It’s a smart, all-purpose AI tool for entrepreneurs and small businesses. The page should feel innovative and trustworthy, with a touch of playful confidence — think Apple meets Notion, but with an AI twist.
+
+Use:
+- Tailwind CSS for styling
+- React (Vite project)
+- Framer Motion for smooth animations (fade-ins, scroll-ins)
+- A clear hero section with headline, subheadline, and CTA button ("Book a Call")
+- A Calendly link or embed to book a meeting
+- Responsive design (mobile-first)
+- Modular components and clean code
+
+Style tone:
+- White space is power
+- Rounded corners, soft shadows
+- Smooth hover effects
+- Font should feel sharp but friendly (use system fonts for now)
+- Keep colors minimal — mostly black/white with one bold accent (blue or pink)
+
+Give me the code for a complete first version of the page, ideally in a few clean React components.
+
++++++++++++++++++++++++++++
+
+You're working with an existing Vite + React + Tailwind CSS project for a landing page called "AI Swiss Knife".
+
+🧩 Current structure:
+- Main file: `src/pages/Home.jsx`
+- Entry point: `src/main.jsx`
+- Tailwind is already configured and working
+- Framer Motion is installed
+- The current layout is basic: header text, hero title, subheadline, a "Book a Call" link, and footer
+- I have a logo file called `aisk.png` in the `public/` folder
+- The Calendly booking link is: https://calendly.com/frederic-brunner
+
+🎯 I want to significantly improve the design and layout:
+
+---
+
+✅ 1. **Header Improvements**
+- Replace the current header with a reusable `Header.jsx` component in `src/components/`
+- Make the header sticky and modern (like [relevanceai.com](https://relevanceai.com/)) with:
+  - The logo `ressources/aisk-logo.png` on the left
+  - Smooth scroll behavior (if we later add more sections)
+  - Transparent background with slight blur or white background on scroll (feel free to use Tailwind's `backdrop-blur` or a conditional class)
+  - Navigation space prepared (even if no links yet — just some visual spacing)
+
+✅ 2. **Redesign the Hero Section**
+- In `Home.jsx`, create a centered layout with:
+  - Large, bold headline like: `Your AI Swiss Army Knife`
+  - Subheadline: `A versatile AI tool for entrepreneurs and small businesses.`
+  - CTA button with text `Book a Call`, linking to the Calendly URL
+  - Proper vertical spacing so that this section fills the viewport height (`min-h-screen` with flex centering)
+  - Use Framer Motion to animate the entry of the headline, subheadline, and button (slide-up + fade-in with delays)
+
+✅ 3. **Add a Red-Accent Swiss Design Vibe**
+- Overall design should be clean, lots of white space, inspired by the Swiss flag
+- Use a bold red (`#e30613` or Tailwind `red-600`) as the primary accent color:
+  - Button background
+  - Hover states
+  - Small dividers or lines if needed
+- Keep fonts and layout minimal — think modern, elegant precision (like Helvetica-inspired design)
+- Rounded buttons, subtle shadows, hover transitions
+
+✅ 4. **Centering & Layout Fixes**
+- Make sure all sections are properly centered both vertically and horizontally
+- Ensure mobile responsiveness — everything should stack and look natural on small screens
+- Use max-width constraints (`max-w-3xl`, `mx-auto`, etc.) to keep content from stretching too wide
+
+✅ 5. **Footer**
+- Keep or slightly polish the footer
+- It should have a light gray text, simple, centered, e.g. `© 2025 AI Swiss Knife`
+
+✅ 6. **Component Structure**
+- Move repeated or large chunks of JSX into separate components in `src/components/`:
+  - `Header.jsx`
+  - (Optional later: `Hero.jsx`, `Footer.jsx`)
+
+✅ 7. **Optional Enhancements**
+- Use a Google Font (like Inter or Open Sans) via `index.html` for better typography
+- Add a favicon with the Swiss cross if desired
+
+---
+
+💬 Please give me only the modified or new components and explain which files should be updated

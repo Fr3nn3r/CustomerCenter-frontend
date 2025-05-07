@@ -1,12 +1,87 @@
-# React + Vite
+# AI Swiss Knife - Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the landing page for AI Swiss Knife, a smart, all-purpose AI tool for entrepreneurs and small businesses.
 
-Currently, two official plugins are available:
+Built with:
+- React (Vite)
+- Tailwind CSS
+- Framer Motion
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Prerequisites
 
-## Expanding the ESLint configuration
+- Node.js (v18 or later recommended)
+- npm or yarn
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+1.  **Clone the repository (if applicable):**
+    ```bash
+    # git clone <repository-url>
+    # cd ai-swiss-knife-landing
+    ```
+
+2.  **Install dependencies:**
+    Using npm:
+    ```bash
+    npm install
+    ```
+    Or using yarn:
+    ```bash
+    yarn install
+    ```
+
+3.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
+    Or
+    ```bash
+    yarn dev
+    ```
+    This will start the Vite development server, typically at `http://localhost:5173`.
+
+4.  **Build for production:**
+    ```bash
+    npm run build
+    ```
+    Or
+    ```bash
+    yarn build
+    ```
+    This will create a `dist` folder with the optimized production build.
+
+5.  **Preview the production build:**
+    ```bash
+    npm run preview
+    ```
+    Or
+    ```bash
+    yarn preview
+    ```
+
+## Project Structure
+
+```
+ai-swiss-knife-landing/
+├── public/
+│   └── vite.svg
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   ├── CTAButton.jsx
+│   │   ├── Features.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Hero.jsx
+│   │   └── Navbar.jsx
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── .eslintrc.cjs
+├── .gitignore
+├── index.html
+├── package.json
+├── postcss.config.js
+├── README.md
+├── tailwind.config.js
+└── vite.config.js
+```
