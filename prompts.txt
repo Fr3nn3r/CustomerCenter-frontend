@@ -189,3 +189,14 @@ If you're not 100% satisfied with our service, we keep working entirely at our e
 During any notice period, we'll work diligently to address your concerns rather than simply processing a refund. Why? Because our business depends on your success, not just collecting payments.
 
 No other option—whether hiring in-house or through an agency—offers this level of performance guarantee.
+
+
++++++++++++++++++++++++++++
+last section let's remove the feature section and instead put a CTA section with:
+
+Book a call with AI Swiss Knife founder Frederic Brunner - 30 years of experience in the software industry.
+Quote "'If you're going to do something, do it properly or go back to making cheese.' my grandmother used to say. While I still make a decent Gruyère on weekends, during the week we're focused on being the growth partners that Swiss businesses can actually count on."
+
+picture in public folder
+
+linkedin profile: https://www.linkedin.com/in/frdbrunner/

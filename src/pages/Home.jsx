@@ -2,12 +2,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Header from '../components/Header';
 import CTAButton from '../components/CTAButton';
-import Features from '../components/Features';
 import Footer from '../components/Footer';
 import PainPoints from '../components/PainPoints';
 import SolutionSection from '../components/SolutionSection';
 import HowItWorksSection from '../components/HowItWorksSection';
 import FAQSection from '../components/FAQSection';
+import FinalCTASection from '../components/FinalCTASection';
 
 const Home = () => {
   const calendlyLink = "https://calendly.com/frederic-brunner";
@@ -90,8 +90,7 @@ const Home = () => {
       <SolutionSection />
       <HowItWorksSection />
       <FAQSection />
-
-      <Features />
+      <FinalCTASection onBookCall={handleBookCall} />
 
       <Footer />
     </div>
