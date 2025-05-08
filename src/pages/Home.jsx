@@ -15,81 +15,136 @@ const Home = () => {
     window.open(CALENDLY_LINK, '_blank', 'noopener,noreferrer');
   };
 
-  // Simplified container variant - only fades itself in
+  // Container animations
   const heroContainerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { duration: 0.5, delay: 0.5 }, // Delay for container to appear after header
+      transition: { 
+        duration: 0.6,
+        staggerChildren: 0.15,
+        delayChildren: 0.3,
+      }
     },
   };
 
-  // Item variants still define the start and end states
+  // Item animations with improved easing
   const heroItemVariants = {
     hidden: { y: 30, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
-      // transition will be defined per item, now with standard easing
+      transition: { 
+        duration: 0.7,
+        ease: [0.215, 0.61, 0.355, 1], // Custom easing for smoother animations
+      }
     },
   };
 
-  // Corrected logging function
-  const handleAnimationComplete = (elementType, definition) => {
-    console.log(`${elementType} animation complete. Definition:`, definition);
+  // Section reveal animation for scroll transitions
+  const sectionReveal = {
+    offscreen: { y: 30, opacity: 0 },
+    onscreen: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.8, ease: [0.215, 0.61, 0.355, 1] }
+    }
   };
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 flex flex-col font-sans">
+    <div className="min-h-screen bg-white text-neutral-800 flex flex-col font-sans">
       <Header onBookCall={handleBookCall} />
 
+      {/* Hero Section with enhanced styling */}
       <motion.section
         variants={heroContainerVariants}
         initial="hidden"
         animate="visible"
-        onAnimationComplete={(definition) => handleAnimationComplete('SECTION', definition)}
-        className="flex-grow flex flex-col items-center justify-center text-center pt-20 pb-16 px-4 sm:px-6 lg:px-8"
+        className="flex-grow flex flex-col items-center justify-center pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-neutral-100"
       >
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto text-center">
+          <motion.div variants={heroItemVariants} className="mb-6 inline-block">
+            <span className="bg-swiss-red bg-opacity-10 text-swiss-red rounded-full px-4 py-1.5 text-sm font-semibold">
+              For B2B Financial Advisors
+            </span>
+          </motion.div>
+          
           <motion.h1
-            variants={heroItemVariants} 
-            initial="hidden"
-            animate="visible"
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
-            onAnimationComplete={(definition) => handleAnimationComplete('H1', definition)}
-            className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-6"
+            variants={heroItemVariants}
+            className="text-4xl sm:text-5xl md:text-6xl font-bold text-neutral-900 leading-tight mb-6"
           >
-            <span className="text-swiss-red">Hands-off sales systems</span><br />for B2B Financial Advisors
+            <span className="text-swiss-red relative inline-block">
+              Hands-off sales systems
+              <span className="absolute -bottom-2 left-0 w-full h-1 bg-swiss-red rounded-full transform translate-y-2 opacity-60"></span>
+            </span>
+            <br />for B2B Financial Advisors
           </motion.h1>
+          
           <motion.p
-            variants={heroItemVariants} 
-            initial="hidden"
-            animate="visible"
-            transition={{ duration: 0.6, ease: "easeOut", delay: 1.0 }}
-            onAnimationComplete={(definition) => handleAnimationComplete('P', definition)}
-            className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-10"
+            variants={heroItemVariants}
+            className="text-lg sm:text-xl text-neutral-800 max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            Get 5-10 Serious Conversations With Potential Clients In One Month... <br className="hidden sm:block" />Or We'll Continue Working At Our Expense Until You Do
+            Get 5-10 Serious Conversations With Potential Clients In One Month...
+            <br className="hidden sm:block" />
+            <span className="font-medium">Or We'll Continue Working At Our Expense Until You Do</span>
           </motion.p>
-          <motion.div 
-            variants={heroItemVariants} 
-            initial="hidden"
-            animate="visible"
-            transition={{ duration: 0.6, ease: "easeOut", delay: 1.2 }} // Changed to standard ease, item specific delay
-            onAnimationComplete={(definition) => handleAnimationComplete('BUTTON DIV', definition)}
-          >
-            <CTAButton onClick={handleBookCall} className="text-lg py-4 px-10">
+          
+          <motion.div variants={heroItemVariants}>
+            <CTAButton 
+              onClick={handleBookCall} 
+              className="text-lg py-4 px-10"
+            >
               Book a Call
             </CTAButton>
           </motion.div>
         </div>
       </motion.section>
 
-      <PainPoints />
-      <SolutionSection />
-      <HowItWorksSection />
-      <FAQSection />
-      <FinalCTASection onBookCall={handleBookCall} />
+      {/* Content sections with scroll reveal animations */}
+      <motion.div
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={sectionReveal}
+      >
+        <PainPoints />
+      </motion.div>
+
+      <motion.div
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={sectionReveal}
+      >
+        <SolutionSection />
+      </motion.div>
+
+      <motion.div
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={sectionReveal}
+      >
+        <HowItWorksSection />
+      </motion.div>
+
+      <motion.div
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={sectionReveal}
+      >
+        <FAQSection />
+      </motion.div>
+
+      <motion.div
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={sectionReveal}
+      >
+        <FinalCTASection onBookCall={handleBookCall} />
+      </motion.div>
 
       <Footer />
     </div>
