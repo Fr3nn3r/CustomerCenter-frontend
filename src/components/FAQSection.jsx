@@ -12,9 +12,9 @@ const faqData = [
         <p className="mb-3"><strong className="text-swiss-red">Our system delivers 17X the output at a fraction of the cost.</strong></p>
         <p className="mb-3">Even after investing months in hiring and training, there's zero guarantee they'll perform. They get sick. They take vacations. They quit unexpectedly.</p>
         <p className="mb-3">Our Swiss-engineered system works 24/7/365, never asks for a raise, and consistently outperforms human SDRs for businesses under CHF 3M in annual revenue.</p>
-        <blockquote className="mt-4 p-4 bg-gray-100 border-l-4 border-swiss-red rounded-r-md">
-          <p className="italic text-gray-700">"I replaced our two-person SDR team with AI Swiss Knife and doubled our qualified leads while cutting costs by 60%. This wasn't even a difficult decision in hindsight."</p>
-          <p className="text-right text-gray-600 font-semibold mt-2">— Marc L., Financial Services</p>
+        <blockquote className="mt-4 p-4 bg-neutral-100 border-l-4 border-swiss-red rounded-r-md">
+          <p className="italic text-neutral-700">"I replaced our two-person SDR team with AI Swiss Knife and doubled our qualified leads while cutting costs by 60%. This wasn't even a difficult decision in hindsight."</p>
+          <p className="text-right text-neutral-600 font-semibold mt-2">— Marc L., Financial Services</p>
         </blockquote>
       </>
     )
@@ -59,7 +59,7 @@ const faqData = [
       <>
         <p className="mb-3">While others waste your time, we waste none.</p>
         <p className="mb-3">Most lead generation agencies burn your first 2-3 weeks on "domain warm-up" and "infrastructure setup"—administrative busywork that postpones actual results while they bill you anyway.</p>
-        <p className="mb-3"><strong className="text-gray-800">Our approach is radically different:</strong></p>
+        <p className="mb-3"><strong className="text-neutral-800">Our approach is radically different:</strong></p>
         <ul className="list-disc list-inside mb-3 space-y-1 pl-4">
           <li>System setup completed in just <span className="font-semibold">2-3 business days.</span></li>
           <li>First qualified leads begin arriving within <span className="font-semibold">3-5 days.</span></li>
@@ -74,7 +74,7 @@ const faqData = [
     question: "What's your refund policy?",
     answer: (
       <>
-        <p className="mb-3"><strong className="text-gray-800">We don't succeed unless you do. Period.</strong></p>
+        <p className="mb-3"><strong className="text-neutral-800">We don't succeed unless you do. Period.</strong></p>
         <p className="mb-3">If you're not 100% satisfied with our service, we keep working entirely at our expense until you are. This isn't a vague promise—it's our contractual commitment.</p>
         <p className="mb-3">During any notice period, we'll work diligently to address your concerns rather than simply processing a refund. Why? Because our business depends on your success, not just collecting payments.</p>
         <p>No other option—whether hiring in-house or through an agency—offers this level of performance guarantee.</p>
@@ -83,58 +83,136 @@ const faqData = [
   }
 ];
 
-const sectionVariants = {
-  hidden: { opacity: 0, y: 50 },
+// Enhanced title animations
+const titleVariants = {
+  hidden: { opacity: 0, y: -50, scale: 0.9 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, staggerChildren: 0.1, delayChildren: 0.2 }
+    scale: 1,
+    transition: {
+      type: "spring",
+      stiffness: 60,
+      damping: 12,
+      duration: 0.8
+    }
   }
 };
 
+// Enhanced FAQ item animation
 const faqItemVariants = {
-  hidden: { opacity: 0, y: -10 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } }
+  hidden: { opacity: 0, y: 30, x: -20 },
+  visible: item => ({
+    opacity: 1,
+    y: 0,
+    x: 0,
+    transition: { 
+      type: "spring",
+      stiffness: 80,
+      damping: 12,
+      delay: item.id * 0.1, 
+      duration: 0.6
+    }
+  }),
+  hover: {
+    backgroundColor: "rgba(245, 245, 245, 0.7)",
+    transition: { duration: 0.2 }
+  }
 };
 
+// Enhanced answer animation
 const answerVariants = {
-  hidden: { opacity: 0, height: 0, marginTop: 0, marginBottom: 0, paddingTop: 0, paddingBottom: 0 },
+  hidden: { 
+    opacity: 0, 
+    height: 0, 
+    scale: 0.95,
+    transition: { 
+      duration: 0.3, 
+      ease: [0.33, 1, 0.68, 1] 
+    }
+  },
   visible: {
     opacity: 1,
     height: "auto",
-    marginTop: "1rem", 
-    marginBottom: "0rem",
-    paddingTop: "1rem",
-    paddingBottom: "1rem",
-    transition: { duration: 0.4, ease: "easeInOut" }
+    scale: 1,
+    transition: { 
+      duration: 0.5, 
+      ease: [0.33, 1, 0.68, 1],
+      staggerChildren: 0.1,
+      delayChildren: 0.1
+    }
   }
 };
 
-const AccordionItem = ({ faq, isOpen, onClick }) => {
+// Content animation
+const contentVariants = {
+  hidden: { opacity: 0, y: 10 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4 }
+  }
+};
+
+// Icon animation
+const iconVariants = {
+  initial: { rotate: 0 },
+  animate: { rotate: 180, transition: { duration: 0.4 } }
+};
+
+const AccordionItem = ({ faq, isOpen, onClick, index }) => {
   return (
-    <motion.div variants={faqItemVariants} className="border-b border-gray-200 last:border-b-0">
-      <button
+    <motion.div 
+      custom={faq}
+      variants={faqItemVariants}
+      initial="hidden"
+      whileInView="visible"
+      whileHover="hover"
+      viewport={{ once: true, amount: 0.1 }}
+      className={`border-b border-neutral-200 last:border-b-0 ${isOpen ? 'bg-neutral-50' : ''} rounded-lg transition-colors duration-250`}
+    >
+      <motion.button
         onClick={onClick}
-        className="flex justify-between items-center w-full py-5 text-left text-lg font-medium text-gray-800 hover:text-swiss-red focus:outline-none transition-colors"
+        className="flex justify-between items-center w-full py-5 px-4 text-left text-lg font-medium text-neutral-800 hover:text-swiss-red focus:outline-none transition-colors duration-250"
+        whileHover={{ 
+          x: isOpen ? 0 : 5, 
+          transition: { duration: 0.2 } 
+        }}
       >
-        <span>{faq.question}</span>
-        {isOpen ? (
-          <MinusCircleIcon className="h-6 w-6 text-swiss-red flex-shrink-0" />
-        ) : (
-          <PlusCircleIcon className="h-6 w-6 text-gray-400 group-hover:text-swiss-red flex-shrink-0" />
-        )}
-      </button>
+        <motion.span
+          whileHover={{ 
+            color: "#D52B1E", 
+            transition: { duration: 0.2 } 
+          }}
+        >
+          {faq.question}
+        </motion.span>
+        <motion.div
+          animate={isOpen ? "animate" : "initial"}
+          variants={iconVariants}
+          className={`flex-shrink-0 ml-2 ${isOpen ? 'text-swiss-red' : 'text-neutral-400'}`}
+        >
+          {isOpen ? (
+            <MinusCircleIcon className="h-6 w-6 transition-colors duration-250" />
+          ) : (
+            <PlusCircleIcon className="h-6 w-6 transition-colors duration-250" />
+          )}
+        </motion.div>
+      </motion.button>
+      
       <AnimatePresence initial={false}>
         {isOpen && (
           <motion.div
-            key="content"
+            key={`content-${faq.id}`}
             initial="hidden"
             animate="visible"
             exit="hidden"
             variants={answerVariants}
-            className="overflow-hidden text-gray-600 leading-relaxed pl-2 pr-2"
+            className="overflow-hidden text-neutral-700 leading-relaxed px-4 pb-5"
           >
-            {faq.answer}
+            <motion.div variants={contentVariants}>
+              {faq.answer}
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -150,33 +228,111 @@ const FAQSection = () => {
   };
 
   return (
-    <motion.section 
+    <section 
       id="faqs"
-      variants={sectionVariants} 
-      initial="hidden" 
-      whileInView="visible" 
-      viewport={{ once: true, amount: 0.1 }}
-      className="py-16 sm:py-24 bg-white" // White background for this section
+      className="py-16 sm:py-24 bg-white"
     >
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.h2 
-          variants={faqItemVariants} // Animate title similarly to items
-          className="text-3xl sm:text-4xl font-bold text-gray-900 text-center mb-12"
+        <motion.div 
+          className="text-center mb-16"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
         >
-          FREQUENTLY ASKED QUESTIONS
-        </motion.h2>
-        <div className="space-y-2">
+          <motion.h2 
+            variants={titleVariants}
+            className="text-3xl sm:text-4xl font-bold text-neutral-900 mb-4"
+          >
+            FREQUENTLY ASKED QUESTIONS
+          </motion.h2>
+          
+          <motion.div
+            initial={{ width: 0 }}
+            whileInView={{ 
+              width: "120px", 
+              transition: { duration: 0.8, delay: 0.3 } 
+            }}
+            viewport={{ once: true }}
+            className="h-1 bg-swiss-red mx-auto rounded-full mb-8"
+          />
+          
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ 
+              opacity: 1, 
+              y: 0,
+              transition: { duration: 0.6, delay: 0.4 } 
+            }}
+            viewport={{ once: true }}
+            className="text-lg text-neutral-700"
+          >
+            Everything you need to know about working with us
+          </motion.p>
+        </motion.div>
+        
+        <motion.div 
+          className="space-y-4"
+          initial={{ opacity: 0 }}
+          whileInView={{ 
+            opacity: 1,
+            transition: { duration: 0.8, delay: 0.5 } 
+          }}
+          viewport={{ once: true }}
+        >
           {faqData.map((faq, index) => (
             <AccordionItem 
               key={faq.id} 
               faq={faq} 
               isOpen={openIndex === index}
               onClick={() => handleClick(index)}
+              index={index}
             />
           ))}
-        </div>
+        </motion.div>
+        
+        {/* Call to action after FAQs */}
+        <motion.div 
+          className="mt-16 text-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ 
+            opacity: 1, 
+            y: 0,
+            transition: { 
+              type: "spring",
+              stiffness: 50,
+              damping: 12,
+              delay: 0.7,
+              duration: 0.8
+            } 
+          }}
+          viewport={{ once: true }}
+        >
+          <motion.p 
+            className="text-lg text-neutral-800 mb-2"
+            whileHover={{ 
+              scale: 1.03,
+              transition: { duration: 0.2 } 
+            }}
+          >
+            Still have questions?
+          </motion.p>
+          <p className="text-neutral-700">
+            Contact us directly at{" "}
+            <motion.a 
+              href="mailto:support@aiswissknife.com" 
+              className="text-swiss-red font-semibold"
+              whileHover={{ 
+                scale: 1.05,
+                textDecoration: "underline",
+                transition: { duration: 0.2 } 
+              }}
+            >
+              support@aiswissknife.com
+            </motion.a>
+          </p>
+        </motion.div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 
