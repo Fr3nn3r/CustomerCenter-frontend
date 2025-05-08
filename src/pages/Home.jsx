@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 import PainPoints from '../components/PainPoints';
 import SolutionSection from '../components/SolutionSection';
 import HowItWorksSection from '../components/HowItWorksSection';
+import FAQSection from '../components/FAQSection';
 
 const Home = () => {
   const calendlyLink = "https://calendly.com/frederic-brunner";
@@ -88,6 +89,7 @@ const Home = () => {
       <PainPoints />
       <SolutionSection />
       <HowItWorksSection />
+      <FAQSection />
 
       <Features />
 
