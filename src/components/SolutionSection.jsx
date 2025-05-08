@@ -59,12 +59,16 @@ const SolutionSection = () => {
         {/* Testimonial Block */}
         <motion.div 
           variants={itemVariants} 
-          className="bg-gray-50 p-6 sm:p-8 rounded-xl shadow-soft mb-12 text-left border border-gray-200/80"
+          className="bg-gray-50 p-6 sm:p-8 rounded-lg shadow-crisp mb-12 text-left border border-transparent hover:border-gray-200/80 transition-colors duration-300"
         >
-          <p className="text-gray-700 italic leading-relaxed mb-4">
-            “Take Thomas from Zürich, for example. As a senior tax advisor with over 20 years of experience, he was excellent at serving clients but struggled to grow his practice consistently. Within just 6 weeks of implementing our system, he generated <strong className="text-swiss-red">8 new client conversations</strong> and converted <strong className="text-swiss-red">4 into long-term engagements</strong>—adding over <strong className="text-swiss-red">CHF 45,000 in annual recurring revenue</strong> while reducing his marketing time by over 90%.”
-          </p>
-          <p className="text-right text-gray-600 font-semibold">
+          <div className="relative">
+            <span className="absolute top-0 left-0 text-6xl text-swiss-red/20 font-serif -mt-4 -ml-2">“</span>
+            <p className="text-gray-700 italic leading-relaxed mb-4 relative z-10">
+              Take Thomas from Zürich, for example. As a senior tax advisor with over 20 years of experience, he was excellent at serving clients but struggled to grow his practice consistently. Within just 6 weeks of implementing our system, he generated <strong className="text-swiss-red font-semibold">8 new client conversations</strong> and converted <strong className="text-swiss-red font-semibold">4 into long-term engagements</strong>—adding over <strong className="text-swiss-red font-semibold">CHF 45,000 in annual recurring revenue</strong> while reducing his marketing time by over 90%.
+            </p>
+            <span className="absolute bottom-0 right-0 text-6xl text-swiss-red/20 font-serif -mb-4 -mr-2 transform rotate-180">“</span>
+          </div>
+          <p className="text-right text-gray-600 font-semibold mt-4">
             - Thomas K., Senior Tax Advisor, Zürich
           </p>
         </motion.div>

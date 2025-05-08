@@ -57,7 +57,7 @@ const Home = () => {
             animate="visible"
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
             onAnimationComplete={(definition) => handleAnimationComplete('H1', definition)}
-            className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-6"
+            className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-8"
           >
             <span className="text-swiss-red">Hands-off sales systems</span><br />for B2B Financial Advisors
           </motion.h1>
@@ -67,7 +67,7 @@ const Home = () => {
             animate="visible"
             transition={{ duration: 0.6, ease: "easeOut", delay: 1.0 }}
             onAnimationComplete={(definition) => handleAnimationComplete('P', definition)}
-            className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-10"
+            className="text-lg sm:text-xl text-gray-700 max-w-2xl mx-auto mb-12"
           >
             Get 5-10 Serious Conversations With Potential Clients In One Month... <br className="hidden sm:block" />Or We'll Continue Working At Our Expense Until You Do
           </motion.p>

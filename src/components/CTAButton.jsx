@@ -6,12 +6,12 @@ const CTAButton = ({ children, onClick, className = '' }) => {
     <motion.button
       whileHover={{ 
         scale: 1.05, 
-        boxShadow: "0px 5px 15px rgba(227, 6, 19, 0.4)"
+        boxShadow: "0px 6px 18px rgba(227, 6, 19, 0.45)",
       }}
       whileTap={{ scale: 0.95 }}
-      transition={{ type: "spring", stiffness: 400, damping: 17 }}
+      transition={{ type: "spring", stiffness: 300, damping: 15 }}
       onClick={onClick}
-      className={`bg-accent text-white font-semibold py-3 px-8 rounded-lg shadow-soft hover:bg-red-700 transition-colors duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-accent focus:ring-opacity-50 ${className}`}
+      className={`bg-swiss-red hover:bg-red-700 text-white font-semibold tracking-wide py-3 px-8 rounded-lg shadow-crisp hover:shadow-soft-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-60 transition-all duration-300 ease-in-out ${className}`}
     >
       {children}
     </motion.button>

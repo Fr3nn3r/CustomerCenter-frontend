@@ -1,64 +1,33 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import {
+  ClockIcon,
+  HomeModernIcon, // Changed from HomeIcon for a more B2B feel
+  ArrowTrendingDownIcon,
+  QuestionMarkCircleIcon, 
+  CalendarDaysIcon,
+  BanknotesIcon,
+  ChartPieIcon 
+} from '@heroicons/react/24/outline';
 
 const painPointsData = [
-  {
-    id: 1,
-    text: "Struggling to find time for consistent new business attraction.",
-    icon: "⏳" // Placeholder icon - time/struggle
-  },
-  {
-    id: 2,
-    text: "Sacrificing personal time (evenings/weekends) for practice growth.",
-    icon: "🏡" // Placeholder icon - home/family time
-  },
-  {
-    id: 3,
-    text: "Losing clients to less qualified but better-marketed competitors.",
-    icon: "📉" // Placeholder icon - loss/competition
-  },
-  {
-    id: 4,
-    text: "Unpredictable revenue due to reliance on word-of-mouth/referrals.",
-    icon: "❓" // Placeholder icon - uncertainty
-  },
-  {
-    id: 5,
-    text: "Unable to follow up with prospects during busy seasons.",
-    icon: "🗓️" // Placeholder icon - calendar/busy
-  },
-  {
-    id: 6,
-    text: "Wasting money on ineffective marketing with poor ROI.",
-    icon: "💸" // Placeholder icon - money/waste
-  },
-  {
-    id: 7,
-    text: "No systematic way to track effectiveness of business development.",
-    icon: "📊" // Placeholder icon - tracking/analytics
-  }
+  { id: 1, text: "Struggling to find time for consistent new business attraction.", Icon: ClockIcon },
+  { id: 2, text: "Sacrificing personal time (evenings/weekends) for practice growth.", Icon: HomeModernIcon },
+  { id: 3, text: "Losing clients to less qualified but better-marketed competitors.", Icon: ArrowTrendingDownIcon },
+  { id: 4, text: "Unpredictable revenue due to reliance on word-of-mouth/referrals.", Icon: QuestionMarkCircleIcon },
+  { id: 5, text: "Unable to follow up with prospects during busy seasons.", Icon: CalendarDaysIcon },
+  { id: 6, text: "Wasting money on ineffective marketing with poor ROI.", Icon: BanknotesIcon },
+  { id: 7, text: "No systematic way to track effectiveness of business development.", Icon: ChartPieIcon }
 ];
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 50 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { 
-      duration: 0.6,
-      staggerChildren: 0.15,
-      delayChildren: 0.2
-    }
-  }
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, staggerChildren: 0.15, delayChildren: 0.2 } }
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, x: -30 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.5, ease: "easeOut" }
-  }
+  hidden: { opacity: 0, x: -30 }, // Keep x for list-like items
+  visible: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeOut" } }
 };
 
 const PainPoints = () => {
@@ -72,27 +41,27 @@ const PainPoints = () => {
     >
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2 
-          variants={itemVariants} // Animate title like an item
-          className="text-3xl sm:text-4xl font-bold text-gray-900 text-center mb-6"
+          variants={itemVariants} 
+          className="text-3xl sm:text-4xl font-bold text-gray-900 text-center mb-8" // Increased margin
         >
-          Recognize Any of These Challenges?
+          Recognize Any of These <span className="text-swiss-red">Challenges?</span>
         </motion.h2>
         <motion.p 
-          variants={itemVariants} // Animate intro like an item
-          className="text-lg text-gray-600 text-center mb-12"
+          variants={itemVariants} 
+          className="text-lg text-gray-700 text-center mb-16" // Increased margin
         >
           You're an expert at managing finances. But finding time to consistently attract new business? That's where many financial advisors struggle.
         </motion.p>
         
-        <div className="space-y-6">
+        <div className="space-y-8">
           {painPointsData.map((point) => (
             <motion.div 
               key={point.id} 
               variants={itemVariants}
-              className="flex items-start p-6 bg-white rounded-xl shadow-soft hover:shadow-soft-lg transition-shadow duration-300"
+              className="flex items-start p-6 bg-white rounded-lg shadow-crisp hover:shadow-soft-lg transition-shadow duration-300 border border-gray-200/70"
             >
-              <span className="text-2xl mr-4 text-swiss-red">{point.icon}</span>
-              <p className="text-gray-700 leading-relaxed">
+              <point.Icon className="h-8 w-8 text-swiss-red mr-5 flex-shrink-0 mt-1" />
+              <p className="text-gray-700 text-lg leading-relaxed">
                 {point.text}
               </p>
             </motion.div>
@@ -100,8 +69,8 @@ const PainPoints = () => {
         </div>
 
         <motion.p 
-          variants={itemVariants} // Animate outro like an item
-          className="text-md text-gray-500 text-center mt-12"
+          variants={itemVariants} 
+          className="text-md text-gray-600 text-center mt-16" // Increased margin
         >
           It's not your fault. You were trained to be an exceptional financial advisor, not a marketing expert.
         </motion.p>

@@ -25,7 +25,7 @@ const Header = ({ onBookCall }) => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out 
-                  ${isScrolled ? 'bg-white/90 shadow-soft backdrop-blur-md' : 'bg-transparent'}`}
+                  ${isScrolled ? 'bg-white/90 shadow-crisp backdrop-blur-md' : 'bg-transparent'}`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">

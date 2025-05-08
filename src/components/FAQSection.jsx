@@ -112,16 +112,16 @@ const answerVariants = {
 
 const AccordionItem = ({ faq, isOpen, onClick }) => {
   return (
-    <motion.div variants={faqItemVariants} className="border-b border-gray-200 last:border-b-0">
+    <motion.div variants={faqItemVariants} className="border-b border-gray-200/80 last:border-b-0">
       <button
         onClick={onClick}
-        className="flex justify-between items-center w-full py-5 text-left text-lg font-medium text-gray-800 hover:text-swiss-red focus:outline-none transition-colors"
+        className="flex justify-between items-center w-full py-5 text-left text-lg font-medium text-gray-800 hover:text-swiss-red focus:outline-none group transition-colors duration-300"
       >
-        <span>{faq.question}</span>
+        <span className="group-hover:text-swiss-red transition-colors duration-300">{faq.question}</span>
         {isOpen ? (
           <MinusCircleIcon className="h-6 w-6 text-swiss-red flex-shrink-0" />
         ) : (
-          <PlusCircleIcon className="h-6 w-6 text-gray-400 group-hover:text-swiss-red flex-shrink-0" />
+          <PlusCircleIcon className="h-6 w-6 text-gray-400 group-hover:text-swiss-red flex-shrink-0 transition-colors duration-300" />
         )}
       </button>
       <AnimatePresence initial={false}>

@@ -203,3 +203,32 @@ linkedin profile: https://www.linkedin.com/in/frdbrunner/
 
 ++++++++++++++++++++++++++
 Now I would like the header to contain links to "How it works" and "FAQs" sections on the right hand side (but leave the CTA button on the far right)
+
+
+++++++++++++++++++++++++++++++++++
+
+You are a front-end designer with an eye for clean, bold, and professional design. Take the following React + Tailwind landing page and improve its visual presentation while keeping all existing content and layout structure. The design should reflect:
+
+Trust and professionalism, suitable for B2B financial advisors.
+
+Swiss design aesthetics – think clean lines, grid-based layout, generous whitespace, and strong typography.
+
+Bold, modern elements that add visual interest, such as subtle animations, gradients, iconography, or hover effects.
+
+Color palette inspired by the Swiss flag: rich reds, clean whites, and neutral grays or blacks.
+
+Specific enhancements to apply:
+
+Improve font pairings for stronger visual hierarchy (especially the hero).
+
+Use better spacing and alignment to avoid “floating” buttons.
+
+Add minimalist iconography to support bullet points.
+
+Add subtle shadow, background gradient, or section dividers for more visual rhythm.
+
+Make sure the CTA buttons are visually irresistible.
+
+Make the header stick on scroll with a drop shadow.
+
+Update the code accordingly.
