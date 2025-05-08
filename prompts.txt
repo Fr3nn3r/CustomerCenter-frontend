@@ -200,3 +200,6 @@ Quote "'If you're going to do something, do it properly or go back to making che
 picture in public folder
 
 linkedin profile: https://www.linkedin.com/in/frdbrunner/
+
+++++++++++++++++++++++++++
+Now I would like the header to contain links to "How it works" and "FAQs" sections on the right hand side (but leave the CTA button on the far right)

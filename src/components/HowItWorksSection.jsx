@@ -59,6 +59,7 @@ const itemVariants = {
 const HowItWorksSection = () => {
   return (
     <motion.section 
+      id="how-it-works"
       variants={sectionVariants}
       initial="hidden"
       whileInView="visible"

@@ -151,6 +151,7 @@ const FAQSection = () => {
 
   return (
     <motion.section 
+      id="faqs"
       variants={sectionVariants} 
       initial="hidden" 
       whileInView="visible" 

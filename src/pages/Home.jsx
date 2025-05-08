@@ -8,12 +8,11 @@ import SolutionSection from '../components/SolutionSection';
 import HowItWorksSection from '../components/HowItWorksSection';
 import FAQSection from '../components/FAQSection';
 import FinalCTASection from '../components/FinalCTASection';
+import { CALENDLY_LINK } from '../constants';
 
 const Home = () => {
-  const calendlyLink = "https://calendly.com/frederic-brunner";
-
   const handleBookCall = () => {
-    window.open(calendlyLink, '_blank', 'noopener,noreferrer');
+    window.open(CALENDLY_LINK, '_blank', 'noopener,noreferrer');
   };
 
   // Simplified container variant - only fades itself in
@@ -42,7 +41,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-white text-gray-900 flex flex-col font-sans">
-      <Header />
+      <Header onBookCall={handleBookCall} />
 
       <motion.section
         variants={heroContainerVariants}
