@@ -122,7 +122,7 @@ const FinalCTASection = ({ onBookCall }) => { // Accept onBookCall as a prop
                 transition: { duration: 0.2 } 
               }}
             >
-              Ready to Systematize Your{" "}
+              Ready to boost your{" "}
               <motion.span 
                 className="text-swiss-red relative inline-block"
                 initial={{ opacity: 0.9 }}
@@ -149,7 +149,7 @@ const FinalCTASection = ({ onBookCall }) => { // Accept onBookCall as a prop
               }}
               viewport={{ once: true }}
             >
-              Book a no-obligation strategy call directly with AI Swiss Knife founder,{" "}
+              Book a call directly with AI Swiss Knife founder,{" "}
               <motion.strong 
                 className="text-neutral-800"
                 whileHover={{ 
@@ -237,7 +237,7 @@ const FinalCTASection = ({ onBookCall }) => { // Accept onBookCall as a prop
                 }}
               >
                 <CTAButton onClick={onBookCall} className="w-full sm:w-auto text-lg py-3.5 px-8">
-                  Book Your Strategy Call
+                  Book Your Intro Call
                 </CTAButton>
               </motion.div>
               
@@ -258,7 +258,7 @@ const FinalCTASection = ({ onBookCall }) => { // Accept onBookCall as a prop
                 >
                   <FaLinkedin className="h-6 w-6 text-neutral-400 group-hover:text-swiss-red transition-colors duration-250" />
                 </motion.div>
-                Connect on LinkedIn
+                Connect
               </motion.a>
             </motion.div>
           </motion.div>
