@@ -2,12 +2,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const sectionVariants = {
-  hidden: { opacity: 0, y: 50 },
+  hidden: { opacity: 0, y: 40 },
   visible: {
     opacity: 1,
     y: 0,
     transition: { 
-      duration: 0.6,
+      duration: 0.7,
+      ease: "circOut",
       staggerChildren: 0.2,
       delayChildren: 0.1
     }
@@ -15,11 +16,11 @@ const sectionVariants = {
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: "easeOut" }
+    transition: { duration: 0.6, ease: "circOut" }
   }
 };
 
@@ -49,7 +50,7 @@ const SolutionSection = () => {
 
         <motion.div variants={itemVariants} className="mb-12">
           <h3 className="text-2xl sm:text-3xl font-semibold text-gray-800 mb-3">
-            <span className="text-swiss-red">CustomerCenter™ System</span> delivers.
+            That's exactly what our <span className="text-swiss-red">AISK CustomerCenter™ System</span> delivers.
           </h3>
           <p className="text-md text-gray-500">
             For Swiss <span className="font-medium text-gray-600">B2B Financial Advisors</span> like you.

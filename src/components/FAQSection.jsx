@@ -84,17 +84,13 @@ const faqData = [
 ];
 
 const sectionVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, staggerChildren: 0.1, delayChildren: 0.2 }
-  }
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "circOut", staggerChildren: 0.1, delayChildren: 0.2 } }
 };
 
 const faqItemVariants = {
-  hidden: { opacity: 0, y: -10 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } }
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.5, ease: "linear" } }
 };
 
 const answerVariants = {
@@ -106,7 +102,7 @@ const answerVariants = {
     marginBottom: "0rem",
     paddingTop: "1rem",
     paddingBottom: "1rem",
-    transition: { duration: 0.4, ease: "easeInOut" }
+    transition: { duration: 0.35, ease: "easeInOut" }
   }
 };
 
@@ -160,7 +156,7 @@ const FAQSection = () => {
     >
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2 
-          variants={faqItemVariants} // Animate title similarly to items
+          variants={faqItemVariants}
           className="text-3xl sm:text-4xl font-bold text-gray-900 text-center mb-12"
         >
           FREQUENTLY ASKED QUESTIONS

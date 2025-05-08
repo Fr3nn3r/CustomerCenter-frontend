@@ -4,24 +4,25 @@ import CTAButton from './CTAButton'; // Assuming CTAButton is in the same folder
 import { FaLinkedin } from 'react-icons/fa'; // Using react-icons for LinkedIn icon
 
 const sectionVariants = {
-  hidden: { opacity: 0, y: 50 },
+  hidden: { opacity: 0, y: 40 }, // Reduced y
   visible: {
     opacity: 1,
     y: 0,
     transition: { 
-      duration: 0.6,
-      staggerChildren: 0.2,
-      delayChildren: 0.1
+      duration: 0.7, 
+      ease: "circOut", 
+      staggerChildren: 0.25, // Slightly more stagger for distinct columns
+      delayChildren: 0.1 
     }
   }
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 20 }, // Reduced y
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: "easeOut" }
+    transition: { duration: 0.6, ease: "circOut" } // circOut, adjusted duration
   }
 };
 
@@ -38,8 +39,8 @@ const FinalCTASection = ({ onBookCall }) => { // Accept onBookCall as a prop
       className="py-16 sm:py-24 bg-gray-100" // Light gray background for contrast
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-10 items-center">
-          {/* Left Column: Text content */}
+        <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
+          {/* Left Column: Text content - Animate as one item */}
           <motion.div variants={itemVariants} className="text-center md:text-left">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Ready to <span className="text-swiss-red">Systematize</span> Your Client Acquisition?
@@ -71,7 +72,7 @@ const FinalCTASection = ({ onBookCall }) => { // Accept onBookCall as a prop
             </div>
           </motion.div>
 
-          {/* Right Column: Founder Image */}
+          {/* Right Column: Founder Image - Animate as another item */}
           <motion.div variants={itemVariants} className="flex justify-center md:justify-end mt-8 md:mt-0">
             <img 
               src={founderImage} 

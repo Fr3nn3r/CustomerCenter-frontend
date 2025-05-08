@@ -26,11 +26,11 @@ const Home = () => {
 
   // Item variants still define the start and end states
   const heroItemVariants = {
-    hidden: { y: 30, opacity: 0 },
+    hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
-      // transition will be defined per item, now with standard easing
+      // transition will be defined per item, using circOut
     },
   };
 
@@ -55,7 +55,7 @@ const Home = () => {
             variants={heroItemVariants} 
             initial="hidden"
             animate="visible"
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
+            transition={{ duration: 0.7, ease: "circOut", delay: 0.8 }}
             onAnimationComplete={(definition) => handleAnimationComplete('H1', definition)}
             className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-8"
           >
@@ -65,7 +65,7 @@ const Home = () => {
             variants={heroItemVariants} 
             initial="hidden"
             animate="visible"
-            transition={{ duration: 0.6, ease: "easeOut", delay: 1.0 }}
+            transition={{ duration: 0.7, ease: "circOut", delay: 0.95 }}
             onAnimationComplete={(definition) => handleAnimationComplete('P', definition)}
             className="text-lg sm:text-xl text-gray-700 max-w-2xl mx-auto mb-12"
           >
@@ -75,7 +75,7 @@ const Home = () => {
             variants={heroItemVariants} 
             initial="hidden"
             animate="visible"
-            transition={{ duration: 0.6, ease: "easeOut", delay: 1.2 }} // Changed to standard ease, item specific delay
+            transition={{ duration: 0.7, ease: "circOut", delay: 1.1 }}
             onAnimationComplete={(definition) => handleAnimationComplete('BUTTON DIV', definition)}
           >
             <CTAButton onClick={handleBookCall} className="text-lg py-4 px-10">

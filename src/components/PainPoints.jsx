@@ -21,14 +21,16 @@ const painPointsData = [
 ];
 
 const sectionVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, staggerChildren: 0.15, delayChildren: 0.2 } }
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "circOut", staggerChildren: 0.15, delayChildren: 0.2 } }
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, x: -30 }, // Keep x for list-like items
-  visible: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeOut" } }
+  hidden: { opacity: 0, x: -20 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "circOut" } }
 };
+
+const cardHoverTransition = { type: "spring", stiffness: 300, damping: 15 };
 
 const PainPoints = () => {
   return (
@@ -36,19 +38,19 @@ const PainPoints = () => {
       variants={sectionVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.15 }}
       className="py-16 sm:py-24 bg-gray-50"
     >
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2 
           variants={itemVariants} 
-          className="text-3xl sm:text-4xl font-bold text-gray-900 text-center mb-8" // Increased margin
+          className="text-3xl sm:text-4xl font-bold text-gray-900 text-center mb-8"
         >
           Recognize Any of These <span className="text-swiss-red">Challenges?</span>
         </motion.h2>
         <motion.p 
           variants={itemVariants} 
-          className="text-lg text-gray-700 text-center mb-16" // Increased margin
+          className="text-lg text-gray-700 text-center mb-16"
         >
           You're an expert at managing finances. But finding time to consistently attract new business? That's where many financial advisors struggle.
         </motion.p>
@@ -58,6 +60,8 @@ const PainPoints = () => {
             <motion.div 
               key={point.id} 
               variants={itemVariants}
+              whileHover={{ y: -6, scale: 1.03, boxShadow: "var(--tw-shadow-soft-lg)" }}
+              transition={cardHoverTransition}
               className="flex items-start p-6 bg-white rounded-lg shadow-crisp hover:shadow-soft-lg transition-shadow duration-300 border border-gray-200/70"
             >
               <point.Icon className="h-8 w-8 text-swiss-red mr-5 flex-shrink-0 mt-1" />
@@ -70,7 +74,7 @@ const PainPoints = () => {
 
         <motion.p 
           variants={itemVariants} 
-          className="text-md text-gray-600 text-center mt-16" // Increased margin
+          className="text-md text-gray-600 text-center mt-16"
         >
           It's not your fault. You were trained to be an exceptional financial advisor, not a marketing expert.
         </motion.p>

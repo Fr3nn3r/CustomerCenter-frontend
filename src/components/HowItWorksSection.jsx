@@ -17,14 +17,16 @@ const howItWorksData = [
 ];
 
 const sectionVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, staggerChildren: 0.15, delayChildren: 0.2 } }
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "circOut", staggerChildren: 0.15, delayChildren: 0.2 } }
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 30 }, // Changed x to y for grid items consistency
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "circOut" } }
 };
+
+const cardHoverTransition = { type: "spring", stiffness: 300, damping: 15 };
 
 const HowItWorksSection = () => {
   return (
@@ -49,6 +51,8 @@ const HowItWorksSection = () => {
             <motion.div 
               key={item.id} 
               variants={itemVariants}
+              whileHover={{ y: -6, scale: 1.03, boxShadow: "var(--tw-shadow-soft-lg)" }} 
+              transition={cardHoverTransition}
               className="flex items-start p-6 bg-white rounded-lg shadow-crisp hover:shadow-soft-lg transition-shadow duration-300 border border-gray-200/70"
             >
               <item.Icon className="h-8 w-8 text-swiss-red mr-5 flex-shrink-0 mt-1" />

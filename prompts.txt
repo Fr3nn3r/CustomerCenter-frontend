@@ -232,3 +232,15 @@ Make sure the CTA buttons are visually irresistible.
 Make the header stick on scroll with a drop shadow.
 
 Update the code accordingly.
+
+++++++++++++++++++++++++++
+
+You are a senior front-end developer and animation designer. I have a landing page built in React and Tailwind CSS. I want you to improve its animations and micro-interactions to make the user experience more engaging and polished. Follow these design goals:
+
+🎯 Animation Goals:
+
+Keep animations subtle and purposeful — no flashy distractions.
+
+Aim for motion that enhances clarity, not just decoration.
+
+Everything should feel smooth, responsive, and premium.
