@@ -91,25 +91,41 @@ const painPointsData = [
   }
 ];
 
-const sectionVariants = {
-  hidden: { opacity: 0, y: 50 },
+// Title animation variants
+const titleVariants = {
+  hidden: { opacity: 0, y: -50 },
   visible: {
-    opacity: 1,
+    opacity: 1, 
     y: 0,
-    transition: { 
-      duration: 0.6,
-      staggerChildren: 0.15,
-      delayChildren: 0.2
+    transition: {
+      type: "spring",
+      stiffness: 60,
+      damping: 12,
+      duration: 0.8
     }
   }
 };
 
-const itemVariants = {
-  hidden: { opacity: 0, x: -20 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.5, ease: [0.215, 0.61, 0.355, 1] }
+// Enhanced icon animation
+const iconVariants = {
+  hidden: { scale: 0, rotate: -30 },
+  visible: { 
+    scale: 1, 
+    rotate: 0,
+    transition: { 
+      type: "spring", 
+      stiffness: 200, 
+      damping: 10,
+      duration: 0.8
+    }
+  },
+  hover: {
+    scale: 1.2,
+    rotate: [0, -10, 10, -5, 5, 0],
+    transition: {
+      duration: 0.6,
+      ease: "easeInOut"
+    }
   }
 };
 
@@ -117,41 +133,114 @@ const PainPoints = () => {
   return (
     <section className="py-16 sm:py-24 bg-neutral-100">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 mb-6">
+        <motion.div 
+          className="text-center mb-16"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+        >
+          <motion.h2 
+            className="text-3xl sm:text-4xl font-bold text-neutral-900 mb-6"
+            variants={titleVariants}
+          >
             Recognize Any of These Challenges?
-          </h2>
-          <p className="text-lg text-neutral-800 max-w-2xl mx-auto">
+          </motion.h2>
+          <motion.p 
+            className="text-lg text-neutral-800 max-w-2xl mx-auto"
+            initial={{ opacity: 0 }}
+            whileInView={{ 
+              opacity: 1, 
+              transition: { duration: 0.8, delay: 0.3 } 
+            }}
+            viewport={{ once: true }}
+          >
             You're an expert at managing finances. But finding time to consistently attract new business? 
             That's where many financial advisors struggle.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
         
         <div className="grid sm:grid-cols-2 gap-6">
           {painPointsData.map((point) => (
             <motion.div 
               key={point.id} 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 50, x: point.id % 2 === 0 ? 50 : -50 }}
+              whileInView={{ 
+                opacity: 1, 
+                y: 0, 
+                x: 0,
+                transition: { 
+                  type: "spring",
+                  stiffness: 50,
+                  damping: 15,
+                  delay: point.id * 0.1 
+                } 
+              }}
+              whileHover={{ 
+                scale: 1.05, 
+                boxShadow: "0px 10px 25px rgba(0, 0, 0, 0.1)",
+                borderColor: "#D52B1E",
+                transition: { duration: 0.2 }
+              }}
               viewport={{ once: true, amount: 0.1 }}
-              transition={{ duration: 0.5, delay: point.id * 0.1 }}
               className="flex items-start p-6 bg-white rounded-xl shadow-soft hover:shadow-soft-lg transition-all duration-250 border border-neutral-200 hover:border-neutral-300"
             >
-              <div className="flex-shrink-0 p-2 mr-4 rounded-lg bg-swiss-red bg-opacity-10 text-swiss-red">
+              <motion.div 
+                className="flex-shrink-0 p-3 mr-4 rounded-lg bg-swiss-red bg-opacity-10 text-swiss-red"
+                variants={iconVariants}
+                initial="hidden"
+                whileInView="visible"
+                whileHover="hover"
+                viewport={{ once: true }}
+              >
                 {point.icon}
-              </div>
-              <p className="text-neutral-800 leading-relaxed pt-1">
-                {point.text}
-              </p>
+              </motion.div>
+              <motion.p 
+                className="text-neutral-800 leading-relaxed pt-1"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1, transition: { duration: 0.5, delay: 0.3 + point.id * 0.1 } }}
+                viewport={{ once: true }}
+              >
+                <motion.span 
+                  className="font-semibold"
+                  initial={{ color: "#333333" }}
+                  whileHover={{ color: "#D52B1E", transition: { duration: 0.2 } }}
+                >
+                  {point.text}
+                </motion.span>
+              </motion.p>
             </motion.div>
           ))}
         </div>
 
-        <div className="text-center mt-12 bg-white p-6 rounded-xl shadow-soft-lg border border-neutral-200">
-          <p className="text-lg text-neutral-800 font-medium">
+        <motion.div 
+          className="text-center mt-16 bg-white p-8 rounded-xl shadow-soft-lg border border-neutral-200"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ 
+            opacity: 1, 
+            y: 0, 
+            transition: { 
+              type: "spring",
+              stiffness: 50,
+              damping: 15,
+              delay: 0.7
+            } 
+          }}
+          whileHover={{ 
+            scale: 1.02, 
+            boxShadow: "0px 15px 30px rgba(213, 43, 30, 0.1)",
+            transition: { duration: 0.3 } 
+          }}
+          viewport={{ once: true }}
+        >
+          <motion.p 
+            className="text-xl text-neutral-800 font-medium"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1, transition: { duration: 0.5, delay: 0.9 } }}
+            viewport={{ once: true }}
+          >
             It's not your fault. You were trained to be an exceptional financial advisor, not a marketing expert.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
       </div>
     </section>
   );
