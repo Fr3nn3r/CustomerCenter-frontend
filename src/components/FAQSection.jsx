@@ -83,35 +83,29 @@ const faqData = [
   }
 ];
 
-// Enhanced title animations
+// More subtle title animations
 const titleVariants = {
-  hidden: { opacity: 0, y: -50, scale: 0.9 },
+  hidden: { opacity: 0, y: -20 },
   visible: {
     opacity: 1,
     y: 0,
-    scale: 1,
     transition: {
-      type: "spring",
-      stiffness: 60,
-      damping: 12,
-      duration: 0.8
+      type: "ease",
+      duration: 0.5
     }
   }
 };
 
-// Enhanced FAQ item animation
+// More subtle FAQ item animation
 const faqItemVariants = {
-  hidden: { opacity: 0, y: 30, x: -20 },
+  hidden: { opacity: 0, y: 10 },
   visible: item => ({
     opacity: 1,
     y: 0,
-    x: 0,
     transition: { 
-      type: "spring",
-      stiffness: 80,
-      damping: 12,
-      delay: item.id * 0.1, 
-      duration: 0.6
+      type: "ease",
+      duration: 0.4,
+      delay: item.id * 0.05
     }
   }),
   hover: {
@@ -120,44 +114,39 @@ const faqItemVariants = {
   }
 };
 
-// Enhanced answer animation
+// More subtle answer animation
 const answerVariants = {
   hidden: { 
     opacity: 0, 
-    height: 0, 
-    scale: 0.95,
+    height: 0,
     transition: { 
-      duration: 0.3, 
-      ease: [0.33, 1, 0.68, 1] 
+      duration: 0.2,
+      ease: "easeInOut"
     }
   },
   visible: {
     opacity: 1,
     height: "auto",
-    scale: 1,
     transition: { 
-      duration: 0.5, 
-      ease: [0.33, 1, 0.68, 1],
-      staggerChildren: 0.1,
-      delayChildren: 0.1
+      duration: 0.3,
+      ease: "easeInOut"
     }
   }
 };
 
 // Content animation
 const contentVariants = {
-  hidden: { opacity: 0, y: 10 },
+  hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    y: 0,
-    transition: { duration: 0.4 }
+    transition: { duration: 0.3 }
   }
 };
 
 // Icon animation
 const iconVariants = {
   initial: { rotate: 0 },
-  animate: { rotate: 180, transition: { duration: 0.4 } }
+  animate: { rotate: 90, transition: { duration: 0.2 } }
 };
 
 const AccordionItem = ({ faq, isOpen, onClick, index }) => {
@@ -167,29 +156,15 @@ const AccordionItem = ({ faq, isOpen, onClick, index }) => {
       variants={faqItemVariants}
       initial="hidden"
       whileInView="visible"
-      whileHover="hover"
       viewport={{ once: true, amount: 0.1 }}
       className={`border-b border-neutral-200 last:border-b-0 ${isOpen ? 'bg-neutral-50' : ''} rounded-lg transition-colors duration-250`}
     >
       <motion.button
         onClick={onClick}
         className="flex justify-between items-center w-full py-5 px-4 text-left text-lg font-medium text-neutral-800 hover:text-swiss-red focus:outline-none transition-colors duration-250"
-        whileHover={{ 
-          x: isOpen ? 0 : 5, 
-          transition: { duration: 0.2 } 
-        }}
       >
-        <motion.span
-          whileHover={{ 
-            color: "#D52B1E", 
-            transition: { duration: 0.2 } 
-          }}
-        >
-          {faq.question}
-        </motion.span>
-        <motion.div
-          animate={isOpen ? "animate" : "initial"}
-          variants={iconVariants}
+        <span>{faq.question}</span>
+        <div
           className={`flex-shrink-0 ml-2 ${isOpen ? 'text-swiss-red' : 'text-neutral-400'}`}
         >
           {isOpen ? (
@@ -197,7 +172,7 @@ const AccordionItem = ({ faq, isOpen, onClick, index }) => {
           ) : (
             <PlusCircleIcon className="h-6 w-6 transition-colors duration-250" />
           )}
-        </motion.div>
+        </div>
       </motion.button>
       
       <AnimatePresence initial={false}>
@@ -233,52 +208,19 @@ const FAQSection = () => {
       className="py-16 sm:py-24 bg-white"
     >
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
-          className="text-center mb-16"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          <motion.h2 
-            variants={titleVariants}
-            className="text-3xl sm:text-4xl font-bold text-neutral-900 mb-4"
-          >
+        <div className="text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 mb-4">
             FREQUENTLY ASKED QUESTIONS
-          </motion.h2>
+          </h2>
           
-          <motion.div
-            initial={{ width: 0 }}
-            whileInView={{ 
-              width: "120px", 
-              transition: { duration: 0.8, delay: 0.3 } 
-            }}
-            viewport={{ once: true }}
-            className="h-1 bg-swiss-red mx-auto rounded-full mb-8"
-          />
+          <div className="h-1 bg-swiss-red w-24 mx-auto rounded-full mb-8"></div>
           
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ 
-              opacity: 1, 
-              y: 0,
-              transition: { duration: 0.6, delay: 0.4 } 
-            }}
-            viewport={{ once: true }}
-            className="text-lg text-neutral-700"
-          >
+          <p className="text-lg text-neutral-700">
             Everything you need to know about working with us
-          </motion.p>
-        </motion.div>
+          </p>
+        </div>
         
-        <motion.div 
-          className="space-y-4"
-          initial={{ opacity: 0 }}
-          whileInView={{ 
-            opacity: 1,
-            transition: { duration: 0.8, delay: 0.5 } 
-          }}
-          viewport={{ once: true }}
-        >
+        <div className="space-y-4">
           {faqData.map((faq, index) => (
             <AccordionItem 
               key={faq.id} 
@@ -288,49 +230,7 @@ const FAQSection = () => {
               index={index}
             />
           ))}
-        </motion.div>
-        
-        {/* Call to action after FAQs */}
-        <motion.div 
-          className="mt-16 text-center"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ 
-            opacity: 1, 
-            y: 0,
-            transition: { 
-              type: "spring",
-              stiffness: 50,
-              damping: 12,
-              delay: 0.7,
-              duration: 0.8
-            } 
-          }}
-          viewport={{ once: true }}
-        >
-          <motion.p 
-            className="text-lg text-neutral-800 mb-2"
-            whileHover={{ 
-              scale: 1.03,
-              transition: { duration: 0.2 } 
-            }}
-          >
-            Still have questions?
-          </motion.p>
-          <p className="text-neutral-700">
-            Contact us directly at{" "}
-            <motion.a 
-              href="mailto:support@aiswissknife.com" 
-              className="text-swiss-red font-semibold"
-              whileHover={{ 
-                scale: 1.05,
-                textDecoration: "underline",
-                transition: { duration: 0.2 } 
-              }}
-            >
-              support@aiswissknife.com
-            </motion.a>
-          </p>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

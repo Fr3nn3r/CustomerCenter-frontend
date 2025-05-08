@@ -1,8 +1,10 @@
 import React from 'react';
+import { FaEnvelope } from 'react-icons/fa';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const linkedInUrl = "https://www.linkedin.com/in/frdbrunner/";
+  const emailContact = "frederic.brunner@aiswissknife.com";
 
   return (
     <footer className="py-10 bg-neutral-900 text-white">
@@ -24,9 +26,18 @@ const Footer = () => {
         </div>
         
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-neutral-400 mb-4 md:mb-0">
-            &copy; {currentYear} AI Swiss Knife. All rights reserved.
-          </p>
+          <div className="mb-4 md:mb-0 flex flex-col md:flex-row items-center md:items-start">
+            <p className="text-sm text-neutral-400 mb-2 md:mb-0 md:mr-4">
+              &copy; {currentYear} AI Swiss Knife. All rights reserved.
+            </p>
+            <a 
+              href={`mailto:${emailContact}`}
+              className="text-sm text-neutral-400 hover:text-white flex items-center transition-colors duration-250"
+            >
+              <FaEnvelope className="mr-2 h-4 w-4" />
+              {emailContact}
+            </a>
+          </div>
           <div className="flex space-x-4">
             <a 
               href={linkedInUrl} 
