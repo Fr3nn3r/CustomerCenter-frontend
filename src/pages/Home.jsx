@@ -4,6 +4,9 @@ import Header from '../components/Header';
 import CTAButton from '../components/CTAButton';
 import Features from '../components/Features';
 import Footer from '../components/Footer';
+import PainPoints from '../components/PainPoints';
+import SolutionSection from '../components/SolutionSection';
+import HowItWorksSection from '../components/HowItWorksSection';
 
 const Home = () => {
   const calendlyLink = "https://calendly.com/frederic-brunner";
@@ -52,21 +55,21 @@ const Home = () => {
             variants={heroItemVariants} 
             initial="hidden"
             animate="visible"
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }} // Changed to standard ease, item specific delay
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
             onAnimationComplete={(definition) => handleAnimationComplete('H1', definition)}
             className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-6"
           >
-            Your AI <span className="text-swiss-red">Swiss Army Knife</span>
+            <span className="text-swiss-red">Hands-off sales systems</span><br />for B2B Financial Advisors
           </motion.h1>
           <motion.p
             variants={heroItemVariants} 
             initial="hidden"
             animate="visible"
-            transition={{ duration: 0.6, ease: "easeOut", delay: 1.0 }} // Changed to standard ease, item specific delay
+            transition={{ duration: 0.6, ease: "easeOut", delay: 1.0 }}
             onAnimationComplete={(definition) => handleAnimationComplete('P', definition)}
-            className="text-lg sm:text-xl text-gray-600 max-w-xl mx-auto mb-10"
+            className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-10"
           >
-            A versatile AI tool for entrepreneurs and small businesses.
+            Get 5-10 Serious Conversations With Potential Clients In One Month... <br className="hidden sm:block" />Or We'll Continue Working At Our Expense Until You Do
           </motion.p>
           <motion.div 
             variants={heroItemVariants} 
@@ -81,6 +84,10 @@ const Home = () => {
           </motion.div>
         </div>
       </motion.section>
+
+      <PainPoints />
+      <SolutionSection />
+      <HowItWorksSection />
 
       <Features />
 

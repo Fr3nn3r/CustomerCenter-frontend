@@ -81,3 +81,111 @@ You're working with an existing Vite + React + Tailwind CSS project for a landin
 ---
 
 💬 Please give me only the modified or new components and explain which files should be updated
+
+
+++++++++++++++++++++++++
+
+below the Hero section I want to create pain points section with the following:
+
+You're an expert at managing your clients' finances. But finding time to consistently attract new business? That's where most accounting professionals struggle.
+
+You spend precious evenings and weekends trying to grow your practice when you should be resting or with family.
+
+You watch less qualified competitors win clients simply because they're better at marketing themselves.
+
+Your reliance on word-of-mouth and referrals creates unpredictable revenue cycles that keep you awake at night.
+
+During busy tax seasons, you're too swamped to follow up with potential prospects—exactly when they need you most.
+
+You've wasted money on ineffective networking events and local advertising with poor ROI.
+
+And worst of all: you have no systematic way to track which business development efforts actually work.
+
+It's not your fault. You were trained to be an exceptional accountant, not a marketing expert.
+
+
+
+++++++++++++++++++++++++++
+
+Now let's add a solution section: 
+Transform Your Practice Growth Without Sacrificing Your Standards
+What if you could implement a client acquisition system that works 24/7, even during your busiest tax seasons?
+
+Imagine checking your inbox each morning to find conversations with pre-qualified prospects who actually need your services—all without you having to spend hours on marketing activities.
+
+That's exactly what our AISK CustomerCenter System delivers for Swiss accounting professionals like you.
+
+Take Thomas from Zürich, for example. As a senior tax advisor with over 20 years of experience, he was excellent at serving clients but struggled to grow his practice consistently. Within just 6 weeks of implementing our system, he generated 8 new client conversations and converted 4 into long-term engagements—adding over CHF 45,000 in annual recurring revenue while reducing his marketing time by over 90%.
+
+The secret? A Swiss-engineered approach that combines precision targeting, cultural calibration, and ethical automation—all aligned with the professional standards and privacy requirements you uphold
+
++++++++++++++++++++++++++++++
+How it worsk section: 
+
+Personalized Messaging: We speak directly to the issues your prospects face, making them more relevant and timely.
+
+Better Conversion Rates: Prospects are more likely to buy from you when they see you providing solutions to their problems.
+
+No time wasted on prospection: We target leads that really need your services, making your campaign more effective.
+
+Build Trust: Showing you understand their challenges and can solve their problem helps build trust and get them on retainers aka long-term relationships for your business.
+
+Faster Revenue Generation: By targeting only the most relevant prospects, the myoProcess Method shortens the sales cycle, helping you close deals quicker and get cash flowing faster, accelerating revenue growth.
+
++++++++++++++++++++++++++++++++
+FAQ section (hide the answer until the user clicks on the question):
+
+FREQUENTLY ASKED QUESTIONS
+
+Q: Why choose our system instead of hiring an SDR?
+The brutal truth about hiring an SDR: You'll pay a minimum of CHF 9,000/month for a single good SDR—and that's just the beginning. Factor in benefits, severance packages, training time, and management overhead, and your real cost skyrockets.
+
+Our system delivers 17X the output at a fraction of the cost.
+
+What's more—with an SDR, you're gambling. Even after investing months in hiring and training, there's zero guarantee they'll perform. They get sick. They take vacations. They quit unexpectedly.
+
+Our Swiss-engineered system works 24/7/365, never asks for a raise, and consistently outperforms human SDRs for businesses under CHF 3M in annual revenue.
+
+"I replaced our two-person SDR team with AI Swiss Knife and doubled our qualified leads while cutting costs by 60%. This wasn't even a difficult decision in hindsight." — Marc L., Financial Services
+
+q: How much more cost-effective is this system, really?
+Let's put actual numbers to this:
+
+• Hiring in-house: You're paying approximately CHF 108,000/year minimum in salary alone for a single SDR. Add 25-40% for benefits, recruitment costs, management time, and equipment.
+
+• Hiring an agency: Typically CHF 6,000-8,000/month with inconsistent results and constant turnover of your account managers.
+
+• Our service: Just 30% of the cost of building an in-house team and 70% of what agencies charge—with significantly better results and zero management headaches.
+
+Plus, you're not just getting a lead generation tool. You gain direct access to two operations executives who've helped scale multiple 8-figure companies. Try getting that level of strategic insight from a junior SDR or agency account manager.
+
+All backed by our 100% satisfaction guarantee—something no recruitment agency or in-house hire will ever offer you.
+
+How does payment work?
+We've made billing as frictionless as our results:
+
+Simply select your preferred payment option above
+You'll be directed to our secure Stripe Checkout page
+After payment, your subscription is automatically created
+Billing renews on the same calendar day each month
+Since our pricing is primarily results-based, you only pay for actual performance. You can pause or cancel your subscription anytime—no lengthy contracts, no hidden termination fees.
+
+How quickly will I see actual results?
+While others waste your time, we waste none.
+
+Most lead generation agencies burn your first 2-3 weeks on "domain warm-up" and "infrastructure setup"—administrative busywork that postpones actual results while they bill you anyway.
+
+Our approach is radically different:
+
+• System setup completed in just 2-3 business days • First qualified leads begin arriving within 3-5 days • Positive ROI typically achieved within the first month
+
+We've engineered our entire process to eliminate delays. No excuses, no "it takes time to build momentum" stalling tactics—just rapid, measurable results that impact your bottom line immediately.
+
+What's your refund policy?
+We don't succeed unless you do. Period.
+
+If you're not 100% satisfied with our service, we keep working entirely at our expense until you are. This isn't a vague promise—it's our contractual commitment.
+
+During any notice period, we'll work diligently to address your concerns rather than simply processing a refund. Why? Because our business depends on your success, not just collecting payments.
+
+No other option—whether hiring in-house or through an agency—offers this level of performance guarantee.

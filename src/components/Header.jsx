@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import CTAButton from './CTAButton';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const calendlyLink = "https://calendly.com/frederic-brunner";
+
+  const handleBookCall = () => {
+    window.open(calendlyLink, '_blank', 'noopener,noreferrer');
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,23 +28,26 @@ const Header = () => {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
+          {/* Logo and Company Name */}
           <div className="flex-shrink-0">
             <a href="/" className="flex items-center">
               <img className="h-10 w-auto" src="/aisk.png" alt="AI Swiss Knife Logo" /> 
-              {/* <span className="ml-3 text-xl font-semibold text-gray-800">AI Swiss Knife</span> */}
+              <span className="ml-3 text-xl font-semibold text-gray-800">
+                AI Swiss Knife
+              </span>
             </a>
           </div>
 
-          {/* Navigation placeholder */}
+          {/* Navigation placeholder - kept for spacing if needed in future */}
           <nav className="hidden md:flex space-x-10">
-            {/* <a href="#features" className={`text-base font-medium ${isScrolled ? 'text-gray-700' : 'text-gray-200 hover:text-white'} hover:text-accent transition-colors`}>Features</a>
-            <a href="#pricing" className={`text-base font-medium ${isScrolled ? 'text-gray-700' : 'text-gray-200 hover:text-white'} hover:text-accent transition-colors`}>Pricing</a> */}
+            {/* Links can go here */}
           </nav>
 
-          {/* Right side (e.g., CTA or future auth links) - can be a placeholder */}
+          {/* Right side CTA Button */}
           <div className="flex items-center">
-            {/* Example: <CTAButton onClick={() => {}} className="text-sm py-2 px-4">Sign Up</CTAButton> */}
+            <CTAButton onClick={handleBookCall} className="text-sm py-2 px-4 md:text-base md:py-2.5 md:px-6">
+              Book Intro Call
+            </CTAButton>
           </div>
         </div>
       </div>
