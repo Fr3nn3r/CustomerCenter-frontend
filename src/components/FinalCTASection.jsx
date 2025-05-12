@@ -116,7 +116,7 @@ const FinalCTASection = ({ onBookCall }) => { // Accept onBookCall as a prop
             className="text-center md:text-left"
           >
             <motion.h2 
-              className="text-3xl sm:text-4xl font-bold text-neutral-900 mb-6"
+              className="text-3xl sm:text-4xl font-display font-bold text-neutral-900 mb-6"
               whileHover={{ 
                 scale: 1.02, 
                 transition: { duration: 0.2 } 

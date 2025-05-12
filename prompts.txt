@@ -1,4 +1,4 @@
-Create a sleek, modern landing page for a company called "AI Swiss Knife". It’s a smart, all-purpose AI tool for entrepreneurs and small businesses. The page should feel innovative and trustworthy, with a touch of playful confidence — think Apple meets Notion, but with an AI twist.
+Create a sleek, modern landing page for a company called "AI Swiss Knife". It's a smart, all-purpose AI tool for entrepreneurs and small businesses. The page should feel innovative and trustworthy, with a touch of playful confidence — think Apple meets Notion, but with an AI twist.
 
 Use:
 - Tailwind CSS for styling
@@ -87,21 +87,23 @@ You're working with an existing Vite + React + Tailwind CSS project for a landin
 
 below the Hero section I want to create pain points section with the following:
 
-You're an expert at managing your clients' finances. But finding time to consistently attract new business? That's where most accounting professionals struggle.
+Headline: "Are you currently Struggling with Practice Growth?"
 
-You spend precious evenings and weekends trying to grow your practice when you should be resting or with family.
+The Surface Problem: Inconsistent flow of qualified new clients
 
-You watch less qualified competitors win clients simply because they're better at marketing themselves.
+But Why? Because most marketing efforts are episodic rather than systematic
 
-Your reliance on word-of-mouth and referrals creates unpredictable revenue cycles that keep you awake at night.
+But Why? Because you don't have time to create and maintain a client acquisition system
 
-During busy tax seasons, you're too swamped to follow up with potential prospects—exactly when they need you most.
+But Why? Because you're already fully occupied serving existing clients (as you should be)
 
-You've wasted money on ineffective networking events and local advertising with poor ROI.
+But Why? Because Swiss accounting professionals are trained to excel at technical work, not marketing
 
-And worst of all: you have no systematic way to track which business development efforts actually work.
+But Why? Because the traditional model assumes word-of-mouth is sufficient for practice growth
 
-It's not your fault. You were trained to be an exceptional accountant, not a marketing expert.
+The Root Cause: You're trying to be both a specialist in your field AND a marketing expert—an impossible combination that forces painful tradeoffs between growing your practice and serving your clients.
+
+The solution isn't working harder or becoming a marketing expert overnight. It's implementing a Swiss-calibrated system designed specifically for professionals like you.
 
 
 
@@ -220,7 +222,7 @@ Specific enhancements to apply:
 
 Improve font pairings for stronger visual hierarchy (especially the hero).
 
-Use better spacing and alignment to avoid “floating” buttons.
+Use better spacing and alignment to avoid "floating" buttons.
 
 Add minimalist iconography to support bullet points.
 
@@ -231,3 +233,40 @@ Make sure the CTA buttons are visually irresistible.
 Make the header stick on scroll with a drop shadow.
 
 update the code accordingly.
+
+
++++++++++++++++++++++++++++++
+
+let's restructure the pain point section with this content:
+
+Headline: "Are you currently Struggling with Practice Growth?"
+
+The Surface Problem: Inconsistent flow of qualified new clients
+
+But Why? Because most marketing efforts are episodic rather than systematic
+
+But Why? Because you don't have time to create and maintain a client acquisition system
+
+But Why? Because you're already fully occupied serving existing clients (as you should be)
+
+But Why? Because Swiss accounting professionals are trained to excel at technical work, not marketing
+
+But Why? Because the traditional model assumes word-of-mouth is sufficient for practice growth
+
+The Root Cause: You're trying to be both a specialist in your field AND a marketing expert—an impossible combination that forces painful tradeoffs between growing your practice and serving your clients.
+
+The solution isn't working harder or becoming a marketing expert overnight. It's implementing a Swiss-calibrated system designed specifically for professionals like you.
+
+++++++++++++++++++++++++++
+
+Now I want to completely update the solution section with the following content, make it professional, appealing, and consistent accross the website: 
+
+(don't include the paragraph names)
+
+Claim: Strategic Outbound is the Most Time-Efficient Growth Channel for Financial Advisors with Limited Marketing Resources
+
+Warrants: As a financial advisor, your time is best spent advising clients, not executing marketing campaigns. Our automated systems require minimal oversight once established, handling prospect identification, initial outreach, and follow-up sequences while you focus on serving existing clients.
+
+Evidence: The average Swiss financial advisor using our system saves 15-20 hours per month on business development activities while generating 3-5X more qualified conversations than through traditional networking and marketing.
+
+Impact: You could systematically grow your practice without sacrificing client service quality or your personal time, creating sustainable growth without the traditional trade-offs.

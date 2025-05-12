@@ -30,7 +30,7 @@ const Header = ({ onBookCall }) => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out 
                   ${isScrolled 
                     ? 'bg-white/95 shadow-header backdrop-blur-md py-3' 
-                    : 'bg-white py-5'}`}
+                    : 'bg-white/80 backdrop-blur-md py-5'}`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-8">
         <div className="flex items-center justify-between">

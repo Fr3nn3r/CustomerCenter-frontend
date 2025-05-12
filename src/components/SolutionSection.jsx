@@ -1,237 +1,116 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-// Enhanced animations for title
+// Animation variants (reuse from PainPoints or define similarly)
 const titleVariants = {
-  hidden: { opacity: 0, y: -50, scale: 0.9 },
+  hidden: { opacity: 0, y: -30 },
   visible: {
-    opacity: 1,
+    opacity: 1, 
     y: 0,
-    scale: 1,
-    transition: { 
+    transition: {
       type: "spring",
-      stiffness: 60,
-      damping: 12,
-      duration: 0.8
-    }
-  }
-};
-
-// Enhanced text fade-in with slight movement
-const textVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { 
-      type: "spring",
-      stiffness: 100,
+      stiffness: 80,
       damping: 15,
-      duration: 0.7
+      duration: 0.6
     }
   }
 };
 
-// Highlight animation for special text
-const highlightVariants = {
-  hidden: { color: "#333333", scale: 1 },
-  visible: { color: "#D52B1E", scale: 1 },
-  hover: { 
-    scale: 1.05, 
-    transition: { duration: 0.2 } 
-  }
-};
-
-// Testimonial card animation
-const testimonialVariants = {
-  hidden: { opacity: 0, y: 40, x: -20 },
+const paragraphVariants = {
+  hidden: { opacity: 0, x: -20 },
   visible: {
     opacity: 1,
-    y: 0,
     x: 0,
-    transition: { 
-      type: "spring",
-      stiffness: 50,
-      damping: 15,
-      duration: 0.8,
-      delay: 0.4
+    transition: {
+      duration: 0.5,
+      ease: "easeOut"
     }
-  },
-  hover: {
-    y: -10,
-    boxShadow: "0px 15px 30px rgba(0, 0, 0, 0.1)",
-    transition: { duration: 0.3 }
   }
 };
+
+const emphasisVariants = {
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delay: 0.2,
+      duration: 0.5,
+      ease: "easeOut"
+    }
+  }
+};
+
+// Stagger container
+const containerVariants = {
+  hidden: { opacity: 1 }, 
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.1 
+    }
+  }
+};
+
 
 const SolutionSection = () => {
   return (
-    <section className="py-16 sm:py-24 bg-white text-neutral-800">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section id="solution" className="py-20 sm:py-28 bg-white text-neutral-800"> {/* Consistent padding */}
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-left"> {/* Changed to text-left for better readability */}
+        
+        {/* Main Claim / Headline */}
         <motion.h2 
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           variants={titleVariants}
-          className="text-3xl sm:text-4xl font-bold mb-6"
+          className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-neutral-900 mb-10 text-center" // Centered headline
         >
-          Transform Your Practice Growth{" "}
-          <br className="hidden sm:block" />
-          Without Sacrificing Your{" "}
-          <motion.span 
-            className="text-swiss-red inline-block"
-            whileHover="hover"
-            variants={highlightVariants}
-          >
-            Standards
-          </motion.span>
+          Strategic Outbound: The Most <span className="text-swiss-red">Time-Efficient</span> Growth Channel for Financial Advisors
         </motion.h2>
 
-        <motion.p 
+        {/* Content Blocks with Stagger */}
+        <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          variants={textVariants}
-          className="text-lg text-neutral-700 mb-8 leading-relaxed"
+          variants={containerVariants}
+          viewport={{ once: true, amount: 0.1 }}
+          className="space-y-8" // Spacing between blocks
         >
-          What if you could implement a client acquisition system that works 24/7, even during your busiest tax seasons? Imagine checking your inbox each morning to find conversations with pre-qualified prospects who actually need your services—all without you having to spend hours on marketing activities.
-        </motion.p>
-
-        <motion.div 
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          variants={textVariants}
-          className="mb-12"
-        >
-          <h3 className="text-2xl sm:text-3xl font-semibold text-neutral-800 mb-3">
-            <motion.span 
-              className="text-swiss-red inline-block"
-              initial={{ opacity: 0.8 }}
-              whileInView={{
-                opacity: [0.8, 1, 0.8],
-                transition: { 
-                  repeat: Infinity, 
-                  duration: 2,
-                  ease: "easeInOut" 
-                }
-              }}
-              viewport={{ once: true }}
-            >
-              CustomerCenter™ System
-            </motion.span> delivers.
-          </h3>
-          <p className="text-md text-neutral-600">
-            For Swiss{" "}
-            <motion.span 
-              className="font-medium text-neutral-800"
-              whileHover={{ 
-                color: "#D52B1E", 
-                transition: { duration: 0.2 } 
-              }}
-            >
-              B2B Financial Advisors
-            </motion.span> like you.
-          </p>
-        </motion.div>
-
-        {/* Testimonial Block with enhanced animations */}
-        <motion.div 
-          initial="hidden"
-          whileInView="visible"
-          whileHover="hover"
-          viewport={{ once: true, amount: 0.2 }}
-          variants={testimonialVariants}
-          className="bg-neutral-100 p-6 sm:p-8 rounded-xl shadow-soft mb-12 text-left border border-neutral-200/80 relative overflow-hidden"
-        >
-          {/* Decorative quote mark */}
+          {/* Warrants Block */}
           <motion.div 
-            className="absolute -top-4 -left-4 text-swiss-red text-opacity-5 select-none pointer-events-none z-0"
-            initial={{ opacity: 0, scale: 0.5 }}
-            whileInView={{ 
-              opacity: 1, 
-              scale: 1,
-              transition: { delay: 0.6, duration: 0.5 }
-            }}
-            viewport={{ once: true }}
-            style={{ fontSize: "150px" }}
+            variants={paragraphVariants} 
+            className="bg-neutral-50 p-6 rounded-lg border border-neutral-200/70 shadow-soft"
           >
-            "
+            <h3 className="text-xl font-semibold text-neutral-800 mb-2">Why It Works</h3>
+            <p className="text-lg text-neutral-700 leading-relaxed">
+              As a financial advisor, your time is best spent advising clients, not executing marketing campaigns. Our <strong className="text-neutral-900">automated systems</strong> require minimal oversight once established, handling prospect identification, initial outreach, and follow-up sequences while you focus on serving existing clients.
+            </p>
+          </motion.div>
+
+          {/* Evidence Block */}
+          <motion.div 
+            variants={paragraphVariants}
+            className="bg-neutral-50 p-6 rounded-lg border border-neutral-200/70 shadow-soft"
+          >
+            <h3 className="text-xl font-semibold text-neutral-800 mb-2">The Proof</h3>
+            <p className="text-lg text-neutral-700 leading-relaxed">
+              The average Swiss financial advisor using our system saves <motion.strong className="text-swiss-red" variants={emphasisVariants}>15-20 hours per month</motion.strong> on business development activities while generating <motion.strong className="text-swiss-red" variants={emphasisVariants}>3-5X more qualified conversations</motion.strong> than through traditional networking and marketing.
+            </p>
+          </motion.div>
+
+          {/* Impact Block */}
+          <motion.div 
+            variants={paragraphVariants}
+            className="bg-swiss-red/5 p-6 rounded-lg border border-swiss-red/20 shadow-soft text-center" // Highlight box for impact
+          >
+            <h3 className="text-xl font-semibold text-swiss-red mb-2">The Impact</h3>
+            <p className="text-lg text-neutral-700 leading-relaxed">
+              You could <strong className="text-neutral-900">systematically grow your practice</strong> without sacrificing client service quality or your personal time, creating sustainable growth without the traditional trade-offs.
+            </p>
           </motion.div>
           
-          <motion.p 
-            className="text-neutral-700 italic leading-relaxed mb-4 relative z-10"
-            initial={{ opacity: 0 }}
-            whileInView={{ 
-              opacity: 1,
-              transition: { delay: 0.7, duration: 0.5 } 
-            }}
-            viewport={{ once: true }}
-          >
-            "Take Thomas from Zürich, for example. As a senior tax advisor with over 20 years of experience, he was excellent at serving clients but struggled to grow his practice consistently. Within just 6 weeks of implementing our system, he generated{" "}
-            <motion.strong 
-              className="text-swiss-red"
-              whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-            >
-              8 new client conversations
-            </motion.strong>{" "}
-            and converted{" "}
-            <motion.strong 
-              className="text-swiss-red"
-              whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-            >
-              4 into long-term engagements
-            </motion.strong>
-            —adding over{" "}
-            <motion.strong 
-              className="text-swiss-red"
-              whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-            >
-              CHF 45,000 in annual recurring revenue
-            </motion.strong>{" "}
-            while reducing his marketing time by over 90%."
-          </motion.p>
-          
-          <motion.p 
-            className="text-right text-neutral-600 font-semibold relative z-10"
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ 
-              opacity: 1, 
-              x: 0,
-              transition: { delay: 0.9, duration: 0.5 } 
-            }}
-            viewport={{ once: true }}
-          >
-            - Thomas K., Senior Tax Advisor, Zürich
-          </motion.p>
-        </motion.div>
-
-        <motion.div 
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          variants={textVariants}
-        >
-          <motion.h4 
-            className="text-xl font-semibold text-neutral-800 mb-3"
-            whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
-          >
-            The Secret? A Swiss-Engineered Approach
-          </motion.h4>
-          <p className="text-lg text-neutral-700 leading-relaxed">
-            It combines precision targeting, cultural calibration, and{" "}
-            <motion.span 
-              className="inline-block"
-              whileHover={{ 
-                color: "#D52B1E", 
-                scale: 1.03,
-                transition: { duration: 0.2 } 
-              }}
-            >
-              ethical automation
-            </motion.span>
-            —all aligned with the professional standards and privacy requirements you uphold.
-          </p>
         </motion.div>
       </div>
     </section>

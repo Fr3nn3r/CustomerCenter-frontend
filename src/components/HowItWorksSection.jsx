@@ -146,9 +146,9 @@ const HowItWorksSection = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           variants={titleVariants}
-          className="text-3xl sm:text-4xl font-bold text-neutral-900 text-center mb-12 sm:mb-16"
+          className="text-3xl sm:text-4xl font-display font-bold text-neutral-900 text-center mb-12 sm:mb-16"
         >
-          How Our{" "}
+          We deliver{" "}
           <motion.span 
             className="text-swiss-red relative inline-block"
             whileHover={{ 
@@ -156,7 +156,7 @@ const HowItWorksSection = () => {
               transition: { duration: 0.2 }
             }}
           >
-            AISK CustomerCenter™ System
+            meetings with fully qualified prospects 
             <motion.span 
               className="absolute -bottom-1 left-0 w-full h-0.5 bg-swiss-red"
               initial={{ scaleX: 0 }}
@@ -167,7 +167,7 @@ const HowItWorksSection = () => {
               viewport={{ once: true }}
             />
           </motion.span>{" "}
-          Delivers Results
+          to your inbox with our CustomerCenter™ System
         </motion.h2>
         
         <div className="grid md:grid-cols-2 gap-x-10 gap-y-12">

@@ -18,12 +18,12 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'Helvetica Neue', 'system-ui', 'sans-serif'],
-        display: ['SF Pro Display', 'Helvetica', 'sans-serif'],
+        display: ['DM Serif Display', 'serif'],
       },
       boxShadow: {
         'soft': '0 4px 12px rgba(0, 0, 0, 0.05)',
         'soft-lg': '0 8px 24px rgba(0, 0, 0, 0.08)',
-        'button': '0 4px 12px rgba(213, 43, 30, 0.2)',
+        'button': '0 10px 25px rgba(213, 43, 30, 0.35)',
         'header': '0 4px 20px rgba(0, 0, 0, 0.08)',
       },
       fontSize: {

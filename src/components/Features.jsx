@@ -51,7 +51,7 @@ const Features = () => {
           <motion.h2 
             variants={featureVariants} 
             custom={0} 
-            className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4"
+            className="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-4"
           >
             Everything You Need, All in One Place
           </motion.h2>

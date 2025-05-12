@@ -39,23 +39,25 @@ const Hero = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h1 
           variants={itemVariants} 
-          className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-6"
+          className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-gray-900 leading-tight mb-6"
         >
           The All-in-One AI <span className="text-accent">Swiss Knife</span>
           <br />
           for Smart Entrepreneurs
         </motion.h1>
-        <motion.p 
-          variants={itemVariants} 
-          className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-10"
-        >
-          Stop juggling tools. Start growing your business. AI Swiss Knife brings you the power of multiple AI applications in one intuitive platform.
-        </motion.p>
-        <motion.div variants={itemVariants}>
-          <CTAButton onClick={handleBookCall}>
-            Book a Call
-          </CTAButton>
-        </motion.div>
+        <div className="max-w-xl mx-auto space-y-8">
+          <motion.p 
+            variants={itemVariants} 
+            className="text-lg sm:text-xl text-gray-600"
+          >
+            Stop juggling tools. Start growing your business. AI Swiss Knife brings you the power of multiple AI applications in one intuitive platform.
+          </motion.p>
+          <motion.div variants={itemVariants}>
+            <CTAButton onClick={handleBookCall}>
+              Book a Call
+            </CTAButton>
+          </motion.div>
+        </div>
       </div>
     </motion.section>
   );
