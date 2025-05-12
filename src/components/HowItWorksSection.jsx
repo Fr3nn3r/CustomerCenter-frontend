@@ -41,32 +41,26 @@ const howItWorksData = [
   {
     id: 1,
     title: "Personalized Messaging",
-    description: "We speak directly to the issues your prospects face, making our outreach more relevant and timely.",
+    description: "Our emails feel 1-on-1, including highly relevant content and targetting pain points.",
     icon: icons.target
   },
   {
     id: 2,
-    title: "Better Conversion Rates",
-    description: "Prospects are more likely to engage when they see you providing direct solutions to their problems.",
+    title: "Strategic targetting",
+    description: "We connect you with decision makers interested in your services from your ideal client profile.",
     icon: icons.growth
   },
   {
     id: 3,
-    title: "No Time Wasted on Prospection",
-    description: "We target leads that genuinely need your services, making your client acquisition efforts highly effective.",
+    title: "Handling large volumes",
+    description: "We handle large volumes of prospects to deliver a sustainable growth channel.",
     icon: icons.time
   },
   {
     id: 4,
-    title: "Build Trust Systematically",
-    description: "Showing you understand their challenges and can solve them helps build trust and secure long-term retainers.",
+    title: "Regulatory compliance",
+    description: "We enable leads to opt out of your email list at any time.",
     icon: icons.handshake
-  },
-  {
-    id: 5,
-    title: "Faster Revenue Generation",
-    description: "By focusing on the most relevant prospects, our myoProcess Method™ shortens the sales cycle, accelerating your revenue growth.",
-    icon: icons.money
   }
 ];
 
@@ -167,7 +161,7 @@ const HowItWorksSection = () => {
               viewport={{ once: true }}
             />
           </motion.span>{" "}
-          to your inbox with our CustomerCenter™ System
+          from your dream customers
         </motion.h2>
         
         <div className="grid md:grid-cols-2 gap-x-10 gap-y-12">

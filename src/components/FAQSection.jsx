@@ -12,10 +12,6 @@ const faqData = [
         <p className="mb-3"><strong className="text-swiss-red">Our system delivers 17X the output at a fraction of the cost.</strong></p>
         <p className="mb-3">Even after investing months in hiring and training, there's zero guarantee they'll perform. They get sick. They take vacations. They quit unexpectedly.</p>
         <p className="mb-3">Our Swiss-engineered system works 24/7/365, never asks for a raise, and consistently outperforms human SDRs for businesses under CHF 3M in annual revenue.</p>
-        <blockquote className="mt-4 p-4 bg-neutral-100 border-l-4 border-swiss-red rounded-r-md">
-          <p className="italic text-neutral-700">"I replaced our two-person SDR team with AI Swiss Knife and doubled our qualified leads while cutting costs by 60%. This wasn't even a difficult decision in hindsight."</p>
-          <p className="text-right text-neutral-600 font-semibold mt-2">— Marc L., Financial Services</p>
-        </blockquote>
       </>
     )
   },
@@ -42,7 +38,6 @@ const faqData = [
       <>
         <p className="mb-3">We've made billing as frictionless as our results:</p>
         <ul className="list-disc list-inside mb-3 space-y-1 pl-4">
-          <li>Simply select your preferred payment option above.</li>
           <li>You'll be directed to our secure Stripe Checkout page.</li>
           <li>After payment, your subscription is automatically created.</li>
           <li>Billing renews on the same calendar day each month.</li>
