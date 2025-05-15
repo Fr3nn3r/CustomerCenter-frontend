@@ -99,11 +99,11 @@ const PainPoints = () => {
             variants={listContainerVariants}
           > 
             {[ // Array for easier mapping and staggering
-              "Because most marketing efforts are episodic rather than systematic",
-              "Because you don't have time to create and maintain a client acquisition system",
-              "Because you're already fully occupied serving existing clients (as you should be)",
-              "Because Swiss financial professionals are trained to excel at technical work, not marketing",
-              "Because the traditional model assumes word-of-mouth is sufficient for practice growth"
+              "Most marketing efforts are episodic rather than systematic",
+              "You don't have time to create and maintain a client acquisition system",
+              "You're already fully occupied serving existing clients",
+              "Financial professionals excel at technical work, not marketing",
+              "Word-of-mouth is insufficient to sustain your practice growth"
             ].map((reason, index) => (
               <motion.p 
                 key={index}
@@ -123,7 +123,7 @@ const PainPoints = () => {
               The Root Cause
             </h3>
             <p className="text-lg text-neutral-600">
-              You're trying to be both a specialist in your field AND a marketing expert—an impossible combination that forces painful tradeoffs between growing your practice and serving your clients.
+              Serving your clients is your highest leverage skill. Finding prospects is not.
             </p>
           </motion.div>
 
@@ -137,7 +137,7 @@ const PainPoints = () => {
             <p 
               className="text-lg sm:text-xl text-swiss-red font-semibold italic"
             >
-              The solution isn't working harder or becoming a marketing expert overnight. It's implementing a <span className="font-bold not-italic">Swiss-calibrated system</span> designed specifically for professionals like you.
+              We connect you directly with your ideal prospects so you just have to close the deal to acquire <span className="font-bold not-italic">net new clients</span>.
             </p>
           </motion.div>
         </motion.div>

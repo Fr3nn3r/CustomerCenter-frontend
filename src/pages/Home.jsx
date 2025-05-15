@@ -97,11 +97,11 @@ const Home = () => {
                 transition: { duration: 0.2 } 
               }}
             >
-              Hands-off sales systems
+              We connect
             </motion.span>
             <div className="h-2"></div> {/* Space between title lines */}
             <span className="inline-block relative">
-              for B2B Financial Advisors
+              Financial Advisors, CFO services
               <motion.span 
                 className="absolute -bottom-3 left-0 w-full h-1 bg-swiss-red rounded-full"
                 initial={{ scaleX: 0, opacity: 0 }}
@@ -115,14 +115,24 @@ const Home = () => {
                   } 
                 }}
               ></motion.span>
+                          <motion.span
+              className="text-swiss-red inline-block"
+              whileHover={{ 
+                scale: 1.03, 
+                transition: { duration: 0.2 } 
+              }}
+            >
+              with new customers
+            </motion.span>
             </span>
+
           </motion.h1>
           
           <motion.p
             variants={heroItemVariants}
             className="text-lg sm:text-xl text-neutral-800 max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            Get 5-10 Serious Conversations With Potential Clients In One Month...
+            Get 5 Conversations with ideal clients in one month.
             <br className="hidden sm:block" />
             <motion.span 
               className="font-medium inline-block"
@@ -132,8 +142,9 @@ const Home = () => {
                 transition: { duration: 0.2 } 
               }}
             >
-              Or We'll Continue Working At Our Expense Until You Do
+              Outcome guaranteed (full refund)
             </motion.span>
+           
           </motion.p>
           
           <motion.div 
