@@ -132,7 +132,7 @@ const Home = () => {
             variants={heroItemVariants}
             className="text-lg sm:text-xl text-neutral-800 max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            Get 5 Conversations with ideal clients in one month.
+            5 Conversations with your ideal clients in one month.
             <br className="hidden sm:block" />
             <motion.span 
               className="font-medium inline-block"

@@ -26,24 +26,7 @@ const faqData = [
           <li><span className="font-semibold">Hiring an agency:</span> Typically CHF 6,000-8,000/month with inconsistent results and constant turnover of your account managers.</li>
         </ul>
         <p className="mb-3"><strong className="text-swiss-red">Our service: Just 30% of the cost of building an in-house team and 70% of what agencies charge</strong>—with significantly better results and zero management headaches.</p>
-        <p className="mb-3">Plus, you're not just getting a lead generation tool. You gain direct access to two operations executives who've helped scale multiple 8-figure companies. Try getting that level of strategic insight from a junior SDR or agency account manager.</p>
         <p>All backed by our <strong className="text-swiss-red">100% satisfaction guarantee</strong>—something no recruitment agency or in-house hire will ever offer you.</p>
-      </>
-    )
-  },
-  {
-    id: 3,
-    question: "How does payment work?",
-    answer: (
-      <>
-        <p className="mb-3">We've made billing as frictionless as our results:</p>
-        <ul className="list-disc list-inside mb-3 space-y-1 pl-4">
-          <li>You'll be directed to our secure Stripe Checkout page.</li>
-          <li>After payment, your subscription is automatically created.</li>
-          <li>Billing renews on the same calendar day each month.</li>
-        </ul>
-        <p className="mb-3">Since our pricing is primarily results-based, you only pay for actual performance.</p>
-        <p>You can pause or cancel your subscription anytime—no lengthy contracts, no hidden termination fees.</p>
       </>
     )
   },
@@ -70,7 +53,7 @@ const faqData = [
     answer: (
       <>
         <p className="mb-3"><strong className="text-neutral-800">We don't succeed unless you do. Period.</strong></p>
-        <p className="mb-3">If you're not 100% satisfied with our service, we keep working entirely at our expense until you are. This isn't a vague promise—it's our contractual commitment.</p>
+        <p className="mb-3">If you're not 100% satisfied with our service, we keep working entirely at our expense until you are. This isn't a vague promise—it's our contractual commitment. If we haven't delivered 5 appointments with prospects within 120 days, we'll refund you the full amount.</p>
         <p className="mb-3">During any notice period, we'll work diligently to address your concerns rather than simply processing a refund. Why? Because our business depends on your success, not just collecting payments.</p>
         <p>No other option—whether hiring in-house or through an agency—offers this level of performance guarantee.</p>
       </>

@@ -67,7 +67,7 @@ const SolutionSection = () => {
           variants={titleVariants}
           className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-neutral-900 mb-10 text-center" // Centered headline
         >
-          Strategic Outbound: The Most <span className="text-swiss-red">Time-Efficient</span> Growth Channel for Financial Advisors
+          Strategic Email Outbound: The <span className="text-swiss-red"> Most Efficient Growth Channel </span> for Financial Advisors
         </motion.h2>
 
         {/* Content Blocks with Stagger */}
@@ -85,7 +85,8 @@ const SolutionSection = () => {
           >
             <h3 className="text-xl font-semibold text-neutral-800 mb-2">Why It Works</h3>
             <p className="text-lg text-neutral-700 leading-relaxed">
-              As a financial advisor, your time is best spent advising clients, not executing marketing campaigns. Our <strong className="text-neutral-900">automated systems</strong> require minimal oversight once established, handling prospect identification, initial outreach, and follow-up sequences while you focus on serving existing clients.
+            Cold outreach can pinpoint industries that commonly need cash (e.g. manufacturers or
+            wholesalers with long payment terms) and pitch how financing will boost their growth or stability. Financial services often require trust building and explanation of value; a tailored message with a case example (“We helped a business like yours free up €100K in cash”) can easily open the dialogue.
             </p>
           </motion.div>
 
@@ -96,7 +97,7 @@ const SolutionSection = () => {
           >
             <h3 className="text-xl font-semibold text-neutral-800 mb-2">The Proof</h3>
             <p className="text-lg text-neutral-700 leading-relaxed">
-              The average Swiss financial advisor using our system saves <motion.strong className="text-swiss-red" variants={emphasisVariants}>15-20 hours per month</motion.strong> on business development activities while generating <motion.strong className="text-swiss-red" variants={emphasisVariants}>3-5X more qualified conversations</motion.strong> than through traditional networking and marketing.
+              Our system is capable of sending custom emails to <motion.strong className="text-swiss-red" variants={emphasisVariants}>thousands of qualified prospects per month</motion.strong> making it very likely to open <motion.strong className="text-swiss-red" variants={emphasisVariants}>3-5X more conversations</motion.strong> than through traditional networking and marketing.
             </p>
           </motion.div>
 
@@ -107,7 +108,8 @@ const SolutionSection = () => {
           >
             <h3 className="text-xl font-semibold text-swiss-red mb-2">The Impact</h3>
             <p className="text-lg text-neutral-700 leading-relaxed">
-              You could <strong className="text-neutral-900">systematically grow your practice</strong> without sacrificing client service quality or your personal time, creating sustainable growth without the traditional trade-offs.
+              You can <strong className="text-neutral-900"> grow your practice</strong> and focus on your highest leverage
+              skills: closing deals with new clients and providing world class service to them. Instead of sacrificing your personal time, <strong className="text-neutral-900">invest in a partnership</strong> with us.
             </p>
           </motion.div>
           

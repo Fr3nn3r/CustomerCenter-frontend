@@ -99,7 +99,7 @@ const PainPoints = () => {
             variants={listContainerVariants}
           > 
             {[ // Array for easier mapping and staggering
-              "Most marketing efforts are episodic rather than systematic",
+              "Episodic marketing efforts (rather than systematic)",
               "You don't have time to create and maintain a client acquisition system",
               "You're already fully occupied serving existing clients",
               "Financial professionals excel at technical work, not marketing",
