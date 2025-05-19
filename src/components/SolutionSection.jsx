@@ -97,7 +97,7 @@ const SolutionSection = () => {
           >
             <h3 className="text-xl font-semibold text-neutral-800 mb-2">The Proof</h3>
             <p className="text-lg text-neutral-700 leading-relaxed">
-              Our system is capable of sending custom emails to <motion.strong className="text-swiss-red" variants={emphasisVariants}>thousands of qualified prospects per month</motion.strong> making it very likely to open <motion.strong className="text-swiss-red" variants={emphasisVariants}>3-5X more conversations</motion.strong> than through traditional networking and marketing.
+              Our system is capable of sending custom emails to <motion.strong className="text-swiss-red" variants={emphasisVariants}>thousands of qualified prospects per month</motion.strong> opening <motion.strong className="text-swiss-red" variants={emphasisVariants}>3-5X more conversations</motion.strong> than through traditional networking and marketing.
             </p>
           </motion.div>
 

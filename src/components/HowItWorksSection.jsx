@@ -41,12 +41,12 @@ const howItWorksData = [
   {
     id: 1,
     title: "Personalized Messaging",
-    description: "Our emails feel 1-on-1, including highly relevant content and targetting pain points.",
+    description: "Our emails feel 1-on-1, including highly relevant content and targeting pain points.",
     icon: icons.target
   },
   {
     id: 2,
-    title: "Strategic targetting",
+    title: "Strategic targeting",
     description: "We connect you with decision makers interested in your services from your ideal client profile.",
     icon: icons.growth
   },
