@@ -14,7 +14,15 @@ const GoogleAnalytics = () => {
       window.dataLayer.push(arguments);
     }
     gtag('js', new Date());
-    gtag('config', 'G-R6GYC87YBT');
+    
+    // Configure Google Analytics with domain settings
+    gtag('config', 'G-R6GYC87YBT', {
+      'cookie_domain': 'aiswissknife.com',
+      'cookie_flags': 'SameSite=None;Secure',
+      'linker': {
+        'domains': ['aiswissknife.com', 'aiswissknife.ch']
+      }
+    });
 
     // Cleanup function
     return () => {
