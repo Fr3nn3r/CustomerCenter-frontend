@@ -1,65 +1,15 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { PlusCircleIcon, MinusCircleIcon } from '@heroicons/react/24/outline'; // Using heroicons for +/-
+import { PlusCircleIcon, MinusCircleIcon } from '@heroicons/react/24/outline';
+import { FAQ_ITEMS } from '../constants';
 
-const faqData = [
-  {
-    id: 1,
-    question: "Why choose our system instead of hiring a Sales Development Representative?",
-    answer: (
-      <>
-        <p className="mb-3">You'll pay a minimum of CHF 9,000/month for a single good SDR—and that's just the beginning. Factor in benefits, severance packages, training time, and management overhead, and your real cost skyrockets.</p>
-        <p className="mb-3"><strong className="text-swiss-red">Our system delivers 17X the output at a fraction of the cost.</strong></p>
-        <p className="mb-3">Even after investing months in hiring and training, there's zero guarantee they'll perform. They get sick. They take vacations. They quit unexpectedly.</p>
-        <p className="mb-3">Our Swiss-engineered system works 24/7/365, never asks for a raise, and consistently outperforms human SDRs for businesses under CHF 3M in annual revenue.</p>
-      </>
-    )
-  },
-  {
-    id: 2,
-    question: "How much more cost-effective is this system, really?",
-    answer: (
-      <>
-        <p className="mb-3">Let's put actual numbers to this:</p>
-        <ul className="list-disc list-inside mb-3 space-y-1 pl-4">
-          <li><span className="font-semibold">Hiring in-house:</span> You're paying approximately CHF 108,000/year minimum in salary alone for a single SDR. Add 25-40% for benefits, recruitment costs, management time, and equipment.</li>
-          <li><span className="font-semibold">Hiring an agency:</span> Typically CHF 6,000-8,000/month with inconsistent results and constant turnover of your account managers.</li>
-        </ul>
-        <p className="mb-3"><strong className="text-swiss-red">Our service: Just 30% of the cost of building an in-house team and 70% of what agencies charge</strong>—with significantly better results and zero management headaches.</p>
-        <p>All backed by our <strong className="text-swiss-red">100% satisfaction guarantee</strong>—something no recruitment agency or in-house hire will ever offer you.</p>
-      </>
-    )
-  },
-  {
-    id: 4,
-    question: "How quickly will I see actual results?",
-    answer: (
-      <>
-        <p className="mb-3">While others waste your time, we waste none.</p>
-        <p className="mb-3">Most lead generation agencies burn your first 2-3 weeks on "domain warm-up" and "infrastructure setup"—administrative busywork that postpones actual results while they bill you anyway.</p>
-        <p className="mb-3"><strong className="text-neutral-800">Our approach is radically different:</strong></p>
-        <ul className="list-disc list-inside mb-3 space-y-1 pl-4">
-          <li>System setup completed in just <span className="font-semibold">2-3 business days.</span></li>
-          <li>First qualified leads begin arriving within <span className="font-semibold">3-5 days.</span></li>
-          <li>Positive ROI typically achieved within the <span className="font-semibold">first month.</span></li>
-        </ul>
-        <p>We've engineered our entire process to eliminate delays. No excuses, no "it takes time to build momentum" stalling tactics—just rapid, measurable results that impact your bottom line immediately.</p>
-      </>
-    )
-  },
-  {
-    id: 5,
-    question: "What's your refund policy?",
-    answer: (
-      <>
-        <p className="mb-3"><strong className="text-neutral-800">We don't succeed unless you do. Period.</strong></p>
-        <p className="mb-3">If you're not 100% satisfied with our service, we keep working entirely at our expense until you are. This isn't a vague promise—it's our contractual commitment. If we haven't delivered 5 appointments with prospects within 120 days, we'll refund you the full amount.</p>
-        <p className="mb-3">During any notice period, we'll work diligently to address your concerns rather than simply processing a refund. Why? Because our business depends on your success, not just collecting payments.</p>
-        <p>No other option—whether hiring in-house or through an agency—offers this level of performance guarantee.</p>
-      </>
-    )
-  }
-];
+const faqData = FAQ_ITEMS.map((item, index) => ({
+  id: index + 1,
+  question: item.question,
+  answer: (
+    <p className="mb-3">{item.answer}</p>
+  )
+}));
 
 // More subtle title animations
 const titleVariants = {
@@ -182,19 +132,19 @@ const FAQSection = () => {
 
   return (
     <section 
-      id="faqs"
+      id="faq"
       className="py-16 sm:py-24 bg-white"
     >
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-display font-bold text-neutral-900 mb-4">
-            FREQUENTLY ASKED QUESTIONS
+            Frequently Asked Questions
           </h2>
           
           <div className="h-1 bg-swiss-red w-24 mx-auto rounded-full mb-8"></div>
           
           <p className="text-lg text-neutral-700">
-            Everything you need to know about working with us
+            Everything you need to know about AI Swiss Knife
           </p>
         </div>
         

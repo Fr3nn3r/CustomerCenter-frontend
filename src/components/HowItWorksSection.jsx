@@ -1,68 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { HOW_IT_WORKS_STEPS } from '../constants';
 
-// SVG icons for the how it works cards
-const icons = {
-  target: (
-    <svg xmlns="http://www.w3.org/2000/svg" className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="12" cy="12" r="10" />
-      <circle cx="12" cy="12" r="6" />
-      <circle cx="12" cy="12" r="2" />
-    </svg>
-  ),
-  growth: (
-    <svg xmlns="http://www.w3.org/2000/svg" className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-    </svg>
-  ),
-  time: (
-    <svg xmlns="http://www.w3.org/2000/svg" className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="12" cy="12" r="10" />
-      <polyline points="12 6 12 12 16 14" />
-    </svg>
-  ),
-  handshake: (
-    <svg xmlns="http://www.w3.org/2000/svg" className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M2 8l2 2-2 2 2 2-2 2" />
-      <path d="M22 8l-2 2 2 2-2 2 2 2" />
-      <path d="M8 10h8" />
-      <path d="M10 14h4" />
-    </svg>
-  ),
-  money: (
-    <svg xmlns="http://www.w3.org/2000/svg" className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <line x1="12" y1="1" x2="12" y2="23" />
-      <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-    </svg>
-  )
-};
-
-const howItWorksData = [
-  {
-    id: 1,
-    title: "Personalized Messaging",
-    description: "Our emails feel 1-on-1, including highly relevant content and targeting pain points.",
-    icon: icons.target
-  },
-  {
-    id: 2,
-    title: "Strategic targeting",
-    description: "We connect you with decision makers interested in your services from your ideal client profile.",
-    icon: icons.growth
-  },
-  {
-    id: 3,
-    title: "Handling large volumes",
-    description: "We handle large volumes of prospects to deliver a sustainable growth channel.",
-    icon: icons.time
-  },
-  {
-    id: 4,
-    title: "Regulatory compliance",
-    description: "We enable leads to opt out of your email list at any time.",
-    icon: icons.handshake
-  }
-];
+// Animation variants
 
 // Enhanced title animation
 const titleVariants = {
@@ -142,75 +82,100 @@ const HowItWorksSection = () => {
           variants={titleVariants}
           className="text-3xl sm:text-4xl font-display font-bold text-neutral-900 text-center mb-12 sm:mb-16"
         >
-          We deliver{" "}
-          <motion.span 
-            className="text-swiss-red relative inline-block"
-            whileHover={{ 
-              scale: 1.05,
-              transition: { duration: 0.2 }
-            }}
-          >
-            meetings with fully qualified prospects 
-            <motion.span 
-              className="absolute -bottom-1 left-0 w-full h-0.5 bg-swiss-red"
-              initial={{ scaleX: 0 }}
-              whileInView={{ 
-                scaleX: 1,
-                transition: { delay: 0.5, duration: 0.6 }
-              }}
-              viewport={{ once: true }}
-            />
-          </motion.span>{" "}
-          from your dream customers
+          How AI Swiss Knife Works
         </motion.h2>
         
-        <div className="grid md:grid-cols-2 gap-x-10 gap-y-12">
-          {howItWorksData.map((item) => (
+        <div className="grid md:grid-cols-3 gap-8">
+          {HOW_IT_WORKS_STEPS.map((step) => (
             <motion.div 
-              key={item.id} 
-              custom={item}
+              key={step.step} 
+              custom={{ id: step.step }}
               initial="hidden"
               whileInView="visible"
               whileHover="hover"
               viewport={{ once: true, amount: 0.1 }}
               variants={cardVariants}
-              className="flex flex-col items-center sm:items-start p-6 bg-white rounded-xl shadow-soft hover:shadow-soft-lg transition-all duration-250 border border-neutral-200"
+              className="flex flex-col items-center text-center p-8 bg-white rounded-xl shadow-soft hover:shadow-soft-lg transition-all duration-250 border border-neutral-200 relative"
             >
+              {/* Step Number */}
               <motion.div 
-                className="flex-shrink-0 p-3 mb-4 rounded-full bg-swiss-red bg-opacity-10 text-swiss-red"
+                className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-swiss-red text-white rounded-full flex items-center justify-center font-bold text-sm"
+                variants={iconVariants}
+              >
+                {step.step}
+              </motion.div>
+              
+              <motion.div 
+                className="text-4xl mb-4 mt-4"
                 variants={iconVariants}
                 whileHover="hover"
               >
-                {item.icon}
+                {step.icon}
               </motion.div>
               
-              <div className="text-center sm:text-left">
+              <div>
                 <motion.h3 
-                  className="text-xl font-semibold text-neutral-800 mb-2"
+                  className="text-xl font-semibold text-neutral-800 mb-3"
                   whileHover={{ 
-                    color: "#D52B1E", 
+                    color: "#D90429", 
                     scale: 1.02, 
                     transition: { duration: 0.2 } 
                   }}
                 >
-                  {item.title}
+                  {step.title}
                 </motion.h3>
                 
                 <motion.p 
-                  className="text-neutral-700 leading-relaxed"
+                  className="text-neutral-600 leading-relaxed"
                   initial={{ opacity: 0 }}
                   whileInView={{ 
                     opacity: 1, 
-                    transition: { delay: 0.3 + item.id * 0.1, duration: 0.5 } 
+                    transition: { delay: 0.3 + step.step * 0.1, duration: 0.5 } 
                   }}
                   viewport={{ once: true }}
                 >
-                  {item.description}
+                  {step.description}
                 </motion.p>
               </div>
+              
+              {/* Arrow connector (except for last step) */}
+              {step.step < 3 && (
+                <motion.div 
+                  className="absolute -right-4 top-1/2 transform -translate-y-1/2 hidden md:block"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ 
+                    opacity: 0.3, 
+                    x: 0,
+                    transition: { delay: 0.5 + step.step * 0.2, duration: 0.5 }
+                  }}
+                  viewport={{ once: true }}
+                >
+                  <svg className="w-8 h-8 text-swiss-red" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </motion.div>
+              )}
             </motion.div>
           ))}
         </div>
+        
+        {/* Audit Log Code Snippet */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ 
+            opacity: 1, 
+            y: 0,
+            transition: { delay: 0.8, duration: 0.6 }
+          }}
+          viewport={{ once: true, amount: 0.2 }}
+          className="mt-16 bg-neutral-900 rounded-lg p-6 text-green-400 font-mono text-sm max-w-2xl mx-auto"
+        >
+          <div className="mb-2 text-neutral-400"># Sample Audit Trail</div>
+          <div>2024-01-15 14:23:15 | INGEST | Document processed: policy_claim_4821.pdf</div>
+          <div>2024-01-15 14:23:16 | VALIDATE | Data integrity: ✓ PASSED</div>
+          <div>2024-01-15 14:23:17 | AUTOMATE | Decision: APPROVE | Confidence: 94%</div>
+          <div>2024-01-15 14:23:18 | AUDIT | Action logged with full context</div>
+        </motion.div>
         
         {/* Decorative background element */}
         <motion.div 

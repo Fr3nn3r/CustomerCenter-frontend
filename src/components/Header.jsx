@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import CTAButton from './CTAButton';
+import { NAV_ITEMS, COMPANY_NAME, CONTACT_EMAIL } from '../constants';
 
 const Header = ({ onBookCall }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,35 +40,40 @@ const Header = ({ onBookCall }) => {
             <a href="/" className="flex items-center">
               <img className="h-10 w-auto" src="/aisk.png" alt="AI Swiss Knife Logo" /> 
               <span className="ml-3 text-xl font-bold text-neutral-900">
-                AI Swiss Knife
+                {COMPANY_NAME}
               </span>
             </a>
           </div>
 
           {/* Navigation */}
-          <div className="hidden md:flex items-center space-x-10">
-            <nav className="flex items-center space-x-10">
-              <a 
-                href="#how-it-works" 
-                className={`${navLinkBaseStyle} ${navLinkStyle} group`}
-              >
-                How it works
-                <LinkIndicator />
-              </a>
-              <a 
-                href="#faqs" 
-                className={`${navLinkBaseStyle} ${navLinkStyle} group`}
-              >
-                FAQs
-                <LinkIndicator />
-              </a>
+          <div className="hidden md:flex items-center space-x-8">
+            <nav className="flex items-center space-x-8">
+              {NAV_ITEMS.map((item) => (
+                <a 
+                  key={item.id}
+                  href={`#${item.id}`} 
+                  className={`${navLinkBaseStyle} ${navLinkStyle} group`}
+                >
+                  {item.label}
+                  <LinkIndicator />
+                </a>
+              ))}
             </nav>
-            <CTAButton 
-              onClick={onBookCall} 
-              className="text-sm py-2.5 px-5 md:text-base md:py-3 md:px-6"
-            >
-              Book Intro Call
-            </CTAButton>
+            
+            <div className="flex items-center space-x-4">
+              <CTAButton 
+                onClick={onBookCall} 
+                className="text-sm py-2.5 px-5 md:text-base md:py-3 md:px-6"
+              >
+                Book a Demo
+              </CTAButton>
+              <a 
+                href={`mailto:${CONTACT_EMAIL}`}
+                className="text-sm font-medium text-neutral-800 hover:text-swiss-red transition-colors duration-250"
+              >
+                Contact
+              </a>
+            </div>
           </div>
 
           {/* Mobile menu button - can be expanded later */}

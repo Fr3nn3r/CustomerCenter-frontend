@@ -1,0 +1,104 @@
+Build a single‑page, APG‑inspired landing site for “AI Swiss Knife” (no database)
+
+PRIMARY OBJECTIVE
+Create a fast, credible, conversion‑ready landing page for AI Swiss Knife (claims automation). Emulate the structure, cadence, and conversion cues of apgsoftware.com (do NOT copy their wording or assets). Single page, static, no data layer.
+
+CORE SECTIONS (in this order; each with an #id for anchor nav)
+1) Header (sticky):
+   - Left: temporary wordmark “AI Swiss Knife”.
+   - Right nav anchors: Benefits, HowItWorks, Compliance, Results, Team, FAQ, Contact.
+   - Primary CTA button: “Book a Demo” (link to https://calendly.com/frederic-brunner/intro).
+   - Secondary link: “Contact” (mailto:frederic.brunner@aiswissknife.com).
+
+2) Hero (above the fold; APG-like short headline + subhead + prominent CTA):
+   - H1 (≤8 words): “Audit‑first AI for faster claims”.
+   - Subhead (≤20 words): “Automate routine claim tasks with a complete, explainable audit trail teams and regulators trust.”
+   - Buttons: [Book a Demo] [See ROI] (scroll to ROI section).
+   - Trust bar: placeholder logos (monochrome).
+
+3) Problem → Solution split (two columns):
+   - Problem bullets (concise): fragmented data, re‑keying, delays, audit friction.
+   - Solution bullets: AI agents extract/validate/route; humans handle exceptions; every action logged for auditability.
+
+4) Benefits / Capabilities (4–6 cards):
+   - Examples: Cycle‑time ↓; LAE ↓; Leakage ↓; Compliance‑ready; Explainable outputs; Legacy‑friendly integrations.
+
+5) How It Works (3 steps with simple icons):
+   - Ingest → Automate → Approve & Explain (include a tiny “audit log” code‑style snippet component).
+
+6) Compliance & Auditability band:
+   - Callouts: EU AI Act / DORA / GDPR‑aware; explainable actions; exportable audit artifacts.
+
+7) Results / Proof band:
+   - Short factual callouts and one highlight of Zurich 2025 challenge prototypes (placeholder metrics now).
+
+8) ROI Mini‑Calculator (client‑side only; APG‑style interactive prompt):
+   - Inputs: claimsPerMonth, avgMinutesPerClaim, rekeyRate%, hourlyCost, automationRate%.
+   - Live outputs: estimated hours saved, cost saved, payback months.
+   - aria-live="polite" for result updates; “Copy results” to clipboard. No persistence, no tracking by default.
+
+9) Testimonials (placeholders):
+   - 2–3 short quotes (role + company type). Do not use real APG quotes or logos.
+
+10) For Whom (buyer tiles):
+   - Claims/COO, CIO/CTO, Risk/Compliance — each with two “what you get” bullets.
+
+11) Team (mini):
+   - Founder + Advisor short bios; placeholder headshots.
+
+12) FAQ (5–7 items):
+   - Security, data handling, change management, pilots, explainability, timelines, pricing model (placeholder).
+
+13) CTA band:
+   - Primary [Book a Demo]; secondary [Email us].
+
+14) Footer:
+   - Company info, email, LinkedIn, legal links (Privacy, Terms stubs).
+
+COPY SEEDS (keep concise, original; map every claim to the PRD)
+- USP: Audit‑first claims automation with explainable actions and complete logs.
+- Outcomes: Faster cycle times, lower LAE, less re‑keying, consistent decisions; human‑in‑the‑loop for exceptions.
+- Buyers: Heads of Claims/COO, CIO/CTO, Risk/Compliance; large EMEA insurers.
+- Credibility: Zurich Innovation Challenge 2025 prototypes; pre‑seed; pilot‑first approach.
+
+TECH / IMPLEMENTATION
+- Framework: Next.js (App Router), single route “/” (all sections on one page). Alternatively, pure React + Vite is acceptable — choose whichever yields cleanest output with Tailwind.
+- Styling: Tailwind CSS, mobile‑first. Theme tokens:
+  -- Accent: Swiss red (#D90429); Neutral base: slate gray; Emphasis: near‑black text; Accessible focus ring.
+  -- Typographic scale with clear H1–H3 hierarchy; max 65ch line length for paragraphs.
+- Components (separate files):
+  Header, SectionHero, SectionProblemSolution, SectionBenefits, SectionHowItWorks, SectionCompliance, SectionResults, SectionROI, SectionTestimonials, SectionBuyers, SectionTeam, SectionFAQ, SectionCTA, Footer.
+  UI primitives: Button, Card, Badge, Input, NumberField, ScreenReaderOnly.
+- Interactivity: only ROI calculator (client‑side JS). All other CTAs are links (Calendly/mailto). No forms, no analytics by default.
+
+ACCESSIBILITY (WCAG 2.1 AA)
+- Semantic landmarks (header, nav, main, footer), skip‑to‑content link.
+- Visible focus outlines; sufficient color contrast ≥ 4.5:1.
+- aria-live for ROI results, labels for all inputs, proper heading order.
+
+PERFORMANCE & SEO
+- Performance budgets: LCP image ≤120KB; JS at first load ≤150KB gz.
+- Lighthouse targets (mobile): ≥90 for Performance, Accessibility, Best Practices, SEO.
+- SEO: <title>, <meta name="description">, canonical, OpenGraph/Twitter, sitemap.xml and robots.txt.
+- JSON‑LD: Organization + FAQ schema.
+
+CONSTRAINTS / WHAT NOT TO INCLUDE
+- No database, auth, or server code. No third‑party heavy animation libs. No copying APG text/assets; emulate structure and conversion patterns only. Keep bundle lean (no unnecessary deps).
+
+QA CHECKS (before finishing)
+- Keyboard‑only traversal works; skip link visible on focus.
+- Hero CTA visible above the fold on 390px wide screens.
+- ROI calculator works offline; results readable by screen readers.
+- Social share previews render correctly.
+
+PLACEHOLDER LINKS / VALUES
+- Calendly: https://calendly.com/ai-swiss-knife/demo
+- Email: mailto:hello@aiswissknife.com
+- Logo: text wordmark for now.
+
+ASK IF NEEDED (one message at end)
+- Confirm accent color and provide a logo when available.
+- Provide any permissible pilot metrics to replace placeholders in Results section.
+
+STYLE/TONE GUARDRAILS
+- Clear, confident, enterprise‑ready. Use benefits‑led microcopy. No hype words. Keep headlines ≤8 words; paragraphs ≤60 words.

@@ -7,8 +7,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        accent: '#D52B1E', // Updated Swiss Red
-        'swiss-red': '#D52B1E',
+        accent: '#D90429', // Swiss Red
+        'swiss-red': '#D90429',
         neutral: {
           100: '#F5F5F5',
           200: '#E0E0E0',
@@ -23,7 +23,7 @@ export default {
       boxShadow: {
         'soft': '0 4px 12px rgba(0, 0, 0, 0.05)',
         'soft-lg': '0 8px 24px rgba(0, 0, 0, 0.08)',
-        'button': '0 10px 25px rgba(213, 43, 30, 0.35)',
+        'button': '0 10px 25px rgba(217, 4, 41, 0.35)',
         'header': '0 4px 20px rgba(0, 0, 0, 0.08)',
       },
       fontSize: {

@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { PROBLEM_POINTS, SOLUTION_POINTS } from '../constants';
 
 // Animation variants
 const titleVariants = {
@@ -55,10 +56,10 @@ const listContainerVariants = {
   }
 };
 
-const PainPoints = () => {
+const ProblemSolutionSection = () => {
   return (
-    <section id="pain-points" className="py-20 sm:py-28 bg-gradient-to-b from-neutral-50 to-neutral-100"> {/* Subtle gradient background */}
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
+    <section id="problem-solution" className="py-20 sm:py-28 bg-gradient-to-b from-neutral-50 to-neutral-100">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="mb-12 text-center"
           initial="hidden"
@@ -69,81 +70,71 @@ const PainPoints = () => {
           <h2 
             className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-neutral-900 mb-4"
           >
-            Struggling with Practice Growth?
+            Old workflow slowing you down
           </h2>
         </motion.div>
         
-        {/* Main content container */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-          variants={{ visible: { transition: { staggerChildren: 0.2 } } }} // Stagger Problem, List, Cause, Solution
-          className="space-y-8 bg-white p-8 sm:p-10 rounded-2xl shadow-xl border border-neutral-200/70" // Enhanced shadow/border
-        >
-          {/* Surface Problem */}
-          <motion.div variants={paragraphVariants}>
-            <h3 className="text-xl sm:text-2xl text-neutral-800 font-semibold mb-2"> 
-              The Surface Problem
-            </h3>
-            <p className="text-lg text-neutral-600">
-              Inconsistent flow of qualified new clients
-            </p>
-          </motion.div>
-
-          <motion.hr className="border-neutral-200" variants={paragraphVariants}/>
-
-          {/* "But Why?" Sequence */}
-          <motion.div 
-            className="space-y-4 pl-4 border-l-2 border-swiss-red/30" // Indent + subtle left border
+        {/* Problem → Solution Split */}
+        <div className="grid md:grid-cols-2 gap-12">
+          {/* Problem Column */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
             variants={listContainerVariants}
-          > 
-            {[ // Array for easier mapping and staggering
-              "Episodic marketing efforts (rather than systematic)",
-              "You don't have time to create and maintain a client acquisition system",
-              "You're already fully occupied serving existing clients",
-              "Financial professionals excel at technical work, not marketing",
-              "Word-of-mouth is insufficient to sustain your practice growth"
-            ].map((reason, index) => (
-              <motion.p 
-                key={index}
-                className="text-lg text-neutral-700"
-                variants={paragraphVariants} // Use paragraph variant for each item
-              >
-                <span className="font-medium text-swiss-red mr-2">›</span> {reason} {/* Use red arrow & margin */}
-              </motion.p>
-            ))}
-          </motion.div>
-
-          <motion.hr className="border-neutral-200" variants={paragraphVariants}/>
-
-          {/* Root Cause */}
-          <motion.div variants={paragraphVariants}> 
-            <h3 className="text-xl sm:text-2xl text-neutral-800 font-semibold mb-2">
-              The Root Cause
-            </h3>
-            <p className="text-lg text-neutral-600">
-              Serving your clients is your highest leverage skill. Finding prospects is not.
-            </p>
-          </motion.div>
-
-          <motion.hr className="border-neutral-300 border-dashed my-6" variants={paragraphVariants}/>
-
-          {/* The Solution */}
-          <motion.div 
-            className="bg-swiss-red/5 p-6 rounded-lg border border-swiss-red/20 text-center" // Highlight box for solution
-            variants={solutionVariants} // Special animation
+            className="bg-white p-8 rounded-2xl shadow-lg border border-neutral-200"
           >
-            <p 
-              className="text-lg sm:text-xl text-swiss-red font-semibold italic"
-            >
-              We connect you directly with your ideal prospects so you just have to close the deal to acquire <span className="font-bold not-italic">net new clients</span>.
-            </p>
+            <h3 className="text-2xl font-bold text-neutral-900 mb-6 text-center">
+              Current Workflow
+            </h3>
+            <ul className="space-y-4">
+              {PROBLEM_POINTS.map((problem, index) => (
+                <motion.li 
+                  key={index}
+                  className="flex items-start space-x-3"
+                  variants={paragraphVariants}
+                >
+                  <span className="flex-shrink-0 w-6 h-6 bg-red-100 rounded-full flex items-center justify-center mt-0.5">
+                    <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                  </span>
+                  <span className="text-neutral-700">{problem}</span>
+                </motion.li>
+              ))}
+            </ul>
           </motion.div>
-        </motion.div>
+
+          {/* Solution Column */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={solutionVariants}
+            className="bg-swiss-red/5 p-8 rounded-2xl border border-swiss-red/20"
+          >
+            <h3 className="text-2xl font-bold text-swiss-red mb-6 text-center">
+              Our Solution
+            </h3>
+            <ul className="space-y-4">
+              {SOLUTION_POINTS.map((solution, index) => (
+                <motion.li 
+                  key={index}
+                  className="flex items-start space-x-3"
+                  variants={paragraphVariants}
+                >
+                  <span className="flex-shrink-0 w-6 h-6 bg-swiss-red/20 rounded-full flex items-center justify-center mt-0.5">
+                    <svg className="w-3 h-3 text-swiss-red" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </span>
+                  <span className="text-neutral-800">{solution}</span>
+                </motion.li>
+              ))}
+            </ul>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
 };
 
-export default PainPoints; 
+export default ProblemSolutionSection; 
