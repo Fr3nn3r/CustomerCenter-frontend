@@ -232,15 +232,6 @@ const Home = () => {
         <FAQSection />
       </motion.div>
 
-      <motion.div
-        initial="offscreen"
-        whileInView="onscreen"
-        viewport={{ once: true, amount: 0.2 }}
-        variants={sectionReveal}
-      >
-        <FinalCTASection onBookCall={handleBookCall} />
-      </motion.div>
-
       <Footer />
     </div>
   );

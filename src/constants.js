@@ -97,25 +97,26 @@ export const HOW_IT_WORKS_STEPS = [
 
 // Compliance Features
 export const COMPLIANCE_FEATURES = [
-  "EU AI Act compliant",
+  "EU AI Act compliance roadmap",
   "DORA ready",
-  "GDPR aware",
+  "GDPR compliant",
   "Explainable actions",
-  "Exportable audit artifacts"
+  "Exportable audit artifacts",
+  "Your data never leaves your systems"
 ];
 
 // Team Members (placeholders)
 export const TEAM_MEMBERS = [
   {
-    name: "Founder",
+    name: "Frederic Brunner",
     role: "CEO & Technical Lead",
-    bio: "Insurance technology expert with 15+ years experience in claims automation.",
+    bio: "Insurance technology expert with 15+ years experience in claims transformation.",
     image: "/placeholder-headshot.jpg"
   },
   {
     name: "Advisor",
     role: "Industry Advisor",
-    bio: "Former Head of Claims at major EMEA insurer, regulatory compliance specialist.",
+    bio: "Former Head of Sales EMEA for a major insurance software vendor, regulatory compliance specialist.",
     image: "/placeholder-headshot.jpg"
   }
 ];
