@@ -40,10 +40,10 @@ const ComplianceSection = () => {
           variants={titleVariants}
           className="mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl font-display font-bold mb-4">
+          <h2 className="text-h2 mb-4">
             Compliance & Auditability First
           </h2>
-          <p className="text-lg text-white/90 max-w-2xl mx-auto">
+          <p className="text-body-lg text-white/90 max-w-2xl mx-auto">
             Built from the ground up to meet the strictest regulatory requirements
           </p>
         </motion.div>

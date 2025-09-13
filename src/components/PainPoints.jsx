@@ -68,7 +68,7 @@ const ProblemSolutionSection = () => {
           variants={titleVariants}
         >
           <h2 
-            className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-neutral-900 mb-4"
+            className="text-h2 text-neutral-900 mb-4"
           >
             Old workflow slowing you down
           </h2>
@@ -84,7 +84,7 @@ const ProblemSolutionSection = () => {
             variants={listContainerVariants}
             className="bg-white p-8 rounded-2xl shadow-lg border border-neutral-200"
           >
-            <h3 className="text-2xl font-bold text-neutral-900 mb-6 text-center">
+            <h3 className="text-h3 text-neutral-900 mb-6 text-center">
               Current Workflow
             </h3>
             <ul className="space-y-4">
@@ -97,7 +97,7 @@ const ProblemSolutionSection = () => {
                   <span className="flex-shrink-0 w-6 h-6 bg-red-100 rounded-full flex items-center justify-center mt-0.5">
                     <span className="w-2 h-2 bg-red-500 rounded-full"></span>
                   </span>
-                  <span className="text-neutral-700">{problem}</span>
+                  <span className="text-body text-neutral-700">{problem}</span>
                 </motion.li>
               ))}
             </ul>
@@ -111,7 +111,7 @@ const ProblemSolutionSection = () => {
             variants={solutionVariants}
             className="bg-swiss-red/5 p-8 rounded-2xl border border-swiss-red/20"
           >
-            <h3 className="text-2xl font-bold text-swiss-red mb-6 text-center">
+            <h3 className="text-h3 text-swiss-red mb-6 text-center">
               Our Solution
             </h3>
             <ul className="space-y-4">
@@ -126,7 +126,7 @@ const ProblemSolutionSection = () => {
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </span>
-                  <span className="text-neutral-800">{solution}</span>
+                  <span className="text-body text-neutral-800">{solution}</span>
                 </motion.li>
               ))}
             </ul>

@@ -41,10 +41,10 @@ const TeamSection = () => {
           variants={titleVariants}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-display font-bold text-neutral-900 mb-4">
+          <h2 className="text-h2 text-neutral-900 mb-4">
             Meet the Team
           </h2>
-          <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
+          <p className="text-body-lg text-neutral-600 max-w-2xl mx-auto">
             Insurance technology experts with deep domain knowledge
           </p>
         </motion.div>
@@ -58,18 +58,18 @@ const TeamSection = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.1 }}
               variants={cardVariants}
-              className="bg-neutral-50 p-8 rounded-xl text-center hover:shadow-lg transition-shadow duration-300"
+              className="bg-neutral-50 p-8 rounded-xl text-center shadow-card hover:shadow-card-hover transition-shadow duration-250"
             >
               <div className="w-24 h-24 bg-neutral-300 rounded-full mx-auto mb-6 flex items-center justify-center">
                 {/* Placeholder avatar */}
-                <svg className="w-12 h-12 text-neutral-500" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-12 h-12 text-neutral-600" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
                 </svg>
               </div>
               
-              <h3 className="text-xl font-bold text-neutral-900 mb-2">{member.name}</h3>
-              <p className="text-swiss-red font-medium mb-4">{member.role}</p>
-              <p className="text-neutral-600 leading-relaxed">{member.bio}</p>
+              <h3 className="text-h3 text-neutral-900 mb-2">{member.name}</h3>
+              <p className="text-body text-swiss-red font-medium mb-4">{member.role}</p>
+              <p className="text-body text-neutral-600 leading-relaxed">{member.bio}</p>
             </motion.div>
           ))}
         </div>
@@ -85,8 +85,8 @@ const TeamSection = () => {
           className="mt-16 text-center"
         >
           <div className="bg-swiss-red/5 p-8 rounded-xl border border-swiss-red/20">
-            <h3 className="text-xl font-bold text-neutral-900 mb-4">Advisory Board</h3>
-            <p className="text-neutral-600 leading-relaxed">
+            <h3 className="text-h3 text-neutral-900 mb-4">Advisory Board</h3>
+            <p className="text-body text-neutral-600 leading-relaxed">
               Backed by former executives from major EMEA insurers and regulatory compliance experts 
               with deep understanding of claims processing challenges and regulatory requirements.
             </p>

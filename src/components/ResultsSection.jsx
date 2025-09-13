@@ -63,10 +63,10 @@ const ResultsSection = () => {
           variants={titleVariants}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-display font-bold text-neutral-900 mb-4">
+          <h2 className="text-h2 text-neutral-900 mb-4">
             Proven Results
           </h2>
-          <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
+          <p className="text-body-lg text-neutral-600 max-w-2xl mx-auto">
             Real performance metrics from our implementations
           </p>
         </motion.div>
@@ -80,11 +80,11 @@ const ResultsSection = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.1 }}
               variants={metricVariants}
-              className="text-center p-8 bg-white rounded-xl shadow-soft hover:shadow-lg transition-shadow duration-300"
+              className="text-center p-8 bg-white rounded-xl shadow-card hover:shadow-card-hover transition-shadow duration-250"
             >
               <div className="text-4xl font-bold text-swiss-red mb-2">{metric.value}</div>
-              <div className="text-xl font-semibold text-neutral-900 mb-2">{metric.label}</div>
-              <div className="text-neutral-600 text-sm">{metric.description}</div>
+              <div className="text-h3 text-neutral-900 mb-2">{metric.label}</div>
+              <div className="text-small text-neutral-600">{metric.description}</div>
             </motion.div>
           ))}
         </div>
@@ -97,7 +97,7 @@ const ResultsSection = () => {
             transition: { delay: 0.4, duration: 0.6 }
           }}
           viewport={{ once: true, amount: 0.2 }}
-          className="bg-white p-8 rounded-xl shadow-soft border-l-4 border-swiss-red"
+          className="bg-white p-8 rounded-xl shadow-card border-l-4 border-swiss-red"
         >
           <div className="flex items-center mb-4">
             <div className="w-12 h-12 bg-swiss-red/10 rounded-lg flex items-center justify-center mr-4">
@@ -106,16 +106,16 @@ const ResultsSection = () => {
               </svg>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-neutral-900">Zurich Innovation Challenge 2025</h3>
-              <p className="text-neutral-600">Selected prototype showcasing breakthrough results</p>
+              <h3 className="text-h3 text-neutral-900">Zurich Innovation Challenge 2025</h3>
+              <p className="text-body text-neutral-600">Selected prototype showcasing breakthrough results</p>
             </div>
           </div>
-          <p className="text-neutral-700 leading-relaxed">
+          <p className="text-body text-neutral-700 leading-relaxed">
             Our claims automation platform was recognized as one of the top innovations in the 
             Zurich Innovation Challenge 2025, demonstrating significant improvements in processing 
             speed, accuracy, and regulatory compliance across multiple insurance use cases.
           </p>
-          <div className="mt-4 text-sm text-neutral-500">
+          <div className="mt-4 text-small text-neutral-600">
             <em>Pilot metrics and detailed case studies available upon request</em>
           </div>
         </motion.div>

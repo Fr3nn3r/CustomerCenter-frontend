@@ -80,7 +80,7 @@ const HowItWorksSection = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           variants={titleVariants}
-          className="text-3xl sm:text-4xl font-display font-bold text-neutral-900 text-center mb-12 sm:mb-16"
+          className="text-h2 text-neutral-900 text-center mb-12 sm:mb-16"
         >
           How AI Swiss Knife Works
         </motion.h2>
@@ -95,7 +95,7 @@ const HowItWorksSection = () => {
               whileHover="hover"
               viewport={{ once: true, amount: 0.1 }}
               variants={cardVariants}
-              className="flex flex-col items-center text-center p-8 bg-white rounded-xl shadow-soft hover:shadow-soft-lg transition-all duration-250 border border-neutral-200 relative"
+              className="flex flex-col items-center text-center p-8 bg-white rounded-xl shadow-card hover:shadow-card-hover transition-shadow duration-250 border border-neutral-200 relative"
             >
               {/* Step Number */}
               <motion.div 
@@ -115,7 +115,7 @@ const HowItWorksSection = () => {
               
               <div>
                 <motion.h3 
-                  className="text-xl font-semibold text-neutral-800 mb-3"
+                  className="text-h3 text-neutral-800 mb-3"
                   whileHover={{ 
                     color: "#D90429", 
                     scale: 1.02, 
@@ -126,7 +126,7 @@ const HowItWorksSection = () => {
                 </motion.h3>
                 
                 <motion.p 
-                  className="text-neutral-600 leading-relaxed"
+                  className="text-body text-neutral-600 leading-relaxed"
                   initial={{ opacity: 0 }}
                   whileInView={{ 
                     opacity: 1, 

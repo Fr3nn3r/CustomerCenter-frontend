@@ -85,14 +85,14 @@ const Home = () => {
           
           <motion.h1
             variants={heroItemVariants}
-            className="text-4xl sm:text-5xl md:text-6xl font-bold text-neutral-900 leading-tight mb-8"
+            className="text-h1 font-bold text-neutral-900 mb-6"
           >
             {HERO_CONTENT.headline}
           </motion.h1>
           
           <motion.p
             variants={heroItemVariants}
-            className="text-lg sm:text-xl text-neutral-800 max-w-2xl mx-auto mb-10 leading-relaxed"
+            className="text-body-lg font-medium text-neutral-700 max-w-lg mx-auto mb-4"
           >
             {HERO_CONTENT.subhead}
           </motion.p>
@@ -102,8 +102,7 @@ const Home = () => {
             variants={heroItemVariants}
             className="mb-10"
           >
-            <p className="text-sm text-neutral-600 mb-4">We build AI agents that plug into your existing systems and automate the back-end work your team should not be doing.</p>
-  
+            <p className="text-body text-neutral-600 max-w-2xl mx-auto">We build AI agents that plug into your existing systems and automate the back-end work your team should not be doing.</p>
           </motion.div>
           
           <motion.div 

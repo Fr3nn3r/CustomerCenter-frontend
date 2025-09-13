@@ -29,14 +29,14 @@ const Benefits = () => {
           <motion.h2 
             variants={featureVariants} 
             custom={0} 
-            className="text-3xl sm:text-4xl font-display font-bold text-neutral-900 mb-4"
+            className="text-h2 text-neutral-900 mb-4"
           >
             Built for the teams behind the business
           </motion.h2>
           <motion.p 
             variants={featureVariants} 
             custom={1} 
-            className="text-lg text-neutral-600 max-w-2xl mx-auto"
+            className="text-body-lg text-neutral-600 max-w-2xl mx-auto"
           >
             Deliver faster, more accurate claims processing with audit-ready automation.
           </motion.p>
@@ -53,11 +53,11 @@ const Benefits = () => {
               key={index}
               custom={index}
               variants={featureVariants}
-              className="bg-white p-8 rounded-xl shadow-soft text-center transform hover:scale-105 transition-transform duration-300 hover:shadow-lg"
+              className="bg-white p-8 rounded-xl shadow-card text-center hover:shadow-card-hover transition-shadow duration-250"
             >
               <div className="text-4xl mb-6">{benefit.icon}</div>
-              <h3 className="text-xl font-semibold text-neutral-900 mb-3">{benefit.title}</h3>
-              <p className="text-neutral-600">{benefit.description}</p>
+              <h3 className="text-h3 text-neutral-900 mb-3">{benefit.title}</h3>
+              <p className="text-body text-neutral-600">{benefit.description}</p>
             </motion.div>
           ))}
         </motion.div>

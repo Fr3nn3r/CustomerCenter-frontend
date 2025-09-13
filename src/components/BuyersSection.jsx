@@ -60,10 +60,10 @@ const BuyersSection = () => {
           variants={titleVariants}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-display font-bold text-neutral-900 mb-4">
+          <h2 className="text-h2 text-neutral-900 mb-4">
             Built for Decision Makers
           </h2>
-          <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
+          <p className="text-body-lg text-neutral-600 max-w-2xl mx-auto">
             Tailored benefits for every key stakeholder in your organization
           </p>
         </motion.div>
@@ -77,13 +77,13 @@ const BuyersSection = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.1 }}
               variants={tileVariants}
-              className="bg-white p-8 rounded-xl shadow-soft hover:shadow-lg transition-shadow duration-300 text-center"
+              className="bg-white p-8 rounded-xl shadow-card hover:shadow-card-hover transition-shadow duration-250 text-center"
             >
               <div className="flex justify-center mb-6">
                 {icons[persona.title]}
               </div>
               
-              <h3 className="text-xl font-bold text-neutral-900 mb-6">{persona.title}</h3>
+              <h3 className="text-h3 text-neutral-900 mb-6">{persona.title}</h3>
               
               <ul className="space-y-3 text-left">
                 {persona.benefits.map((benefit, benefitIndex) => (
@@ -91,7 +91,7 @@ const BuyersSection = () => {
                     <svg className="w-5 h-5 text-swiss-red mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    <span className="text-neutral-700">{benefit}</span>
+                    <span className="text-body text-neutral-700">{benefit}</span>
                   </li>
                 ))}
               </ul>
@@ -110,8 +110,8 @@ const BuyersSection = () => {
           className="mt-16 text-center"
         >
           <div className="bg-swiss-red/5 p-8 rounded-xl border border-swiss-red/20">
-            <h3 className="text-xl font-bold text-neutral-900 mb-4">Perfect for Large EMEA Insurers</h3>
-            <p className="text-neutral-600 leading-relaxed max-w-3xl mx-auto">
+            <h3 className="text-h3 text-neutral-900 mb-4">Perfect for Large EMEA Insurers</h3>
+            <p className="text-body text-neutral-600 leading-relaxed max-w-3xl mx-auto">
               Our solution is specifically designed for established insurance companies processing 
               high volumes of claims and requiring strict regulatory compliance across European markets. 
               Ideal for organizations looking to modernize their claims processing while maintaining 

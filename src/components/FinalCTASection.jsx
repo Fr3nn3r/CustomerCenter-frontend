@@ -116,7 +116,7 @@ const FinalCTASection = ({ onBookCall }) => { // Accept onBookCall as a prop
             className="text-center md:text-left"
           >
             <motion.h2 
-              className="text-3xl sm:text-4xl font-display font-bold text-neutral-900 mb-6"
+              className="text-h2 text-neutral-900 mb-6"
               whileHover={{ 
                 scale: 1.02, 
                 transition: { duration: 0.2 } 
@@ -141,7 +141,7 @@ const FinalCTASection = ({ onBookCall }) => { // Accept onBookCall as a prop
             </motion.h2>
             
             <motion.p 
-              className="text-lg text-neutral-700 mb-6 leading-relaxed"
+              className="text-body-lg text-neutral-700 mb-6 leading-relaxed"
               initial={{ opacity: 0 }}
               whileInView={{ 
                 opacity: 1, 
@@ -183,7 +183,7 @@ const FinalCTASection = ({ onBookCall }) => { // Accept onBookCall as a prop
               </motion.div>
             
               <motion.p 
-                className="italic mb-2 relative z-10"
+                className="text-body italic mb-2 relative z-10"
                 initial={{ opacity: 0 }}
                 whileInView={{ 
                   opacity: 1, 
@@ -195,7 +195,7 @@ const FinalCTASection = ({ onBookCall }) => { // Accept onBookCall as a prop
               </motion.p>
               
               <motion.p 
-                className="text-right font-semibold text-neutral-700 relative z-10"
+                className="text-body text-right font-semibold text-neutral-700 relative z-10"
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ 
                   opacity: 1, 
@@ -256,7 +256,7 @@ const FinalCTASection = ({ onBookCall }) => { // Accept onBookCall as a prop
                   whileHover={{ rotate: 360, transition: { duration: 0.5 } }}
                   className="mr-2"
                 >
-                  <FaLinkedin className="h-6 w-6 text-neutral-400 group-hover:text-swiss-red transition-colors duration-250" />
+                  <FaLinkedin className="h-6 w-6 text-neutral-600 group-hover:text-swiss-red transition-colors duration-250" />
                 </motion.div>
                 Connect
               </motion.a>

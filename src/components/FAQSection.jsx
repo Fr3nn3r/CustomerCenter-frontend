@@ -89,11 +89,11 @@ const AccordionItem = ({ faq, isOpen, onClick, index }) => {
     >
       <motion.button
         onClick={onClick}
-        className="flex justify-between items-center w-full py-5 px-4 text-left text-lg font-medium text-neutral-800 hover:text-swiss-red focus:outline-none transition-colors duration-250"
+        className="flex justify-between items-center w-full py-5 px-4 text-left text-body-lg font-medium text-neutral-800 hover:text-swiss-red focus:outline-none transition-colors duration-250"
       >
         <span>{faq.question}</span>
         <div
-          className={`flex-shrink-0 ml-2 ${isOpen ? 'text-swiss-red' : 'text-neutral-400'}`}
+          className={`flex-shrink-0 ml-2 ${isOpen ? 'text-swiss-red' : 'text-neutral-600'}`}
         >
           {isOpen ? (
             <MinusCircleIcon className="h-6 w-6 transition-colors duration-250" />
@@ -111,7 +111,7 @@ const AccordionItem = ({ faq, isOpen, onClick, index }) => {
             animate="visible"
             exit="hidden"
             variants={answerVariants}
-            className="overflow-hidden text-neutral-700 leading-relaxed px-4 pb-5"
+            className="overflow-hidden text-body text-neutral-700 leading-relaxed px-4 pb-5"
           >
             <motion.div variants={contentVariants}>
               {faq.answer}
@@ -137,13 +137,13 @@ const FAQSection = () => {
     >
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-display font-bold text-neutral-900 mb-4">
+          <h2 className="text-h2 text-neutral-900 mb-4">
             Frequently Asked Questions
           </h2>
           
           <div className="h-1 bg-swiss-red w-24 mx-auto rounded-full mb-8"></div>
           
-          <p className="text-lg text-neutral-700">
+          <p className="text-body-lg text-neutral-700">
             Everything you need to know about AI Swiss Knife
           </p>
         </div>
