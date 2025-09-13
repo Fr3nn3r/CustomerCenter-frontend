@@ -9,9 +9,6 @@ export const COMPANY_TAGLINE = "Audit-first AI for faster claims";
 export const NAV_ITEMS = [
   { id: 'benefits', label: 'Benefits' },
   { id: 'how-it-works', label: 'How It Works' },
-  { id: 'compliance', label: 'Compliance' },
-  { id: 'results', label: 'Results' },
-  { id: 'team', label: 'Team' },
   { id: 'faq', label: 'FAQ' },
   { id: 'contact', label: 'Contact' }
 ];

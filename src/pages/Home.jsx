@@ -82,18 +82,6 @@ const Home = () => {
         className="flex-grow flex flex-col items-center justify-center pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-neutral-100"
       >
         <div className="max-w-3xl mx-auto text-center">
-          <motion.div 
-            variants={heroItemVariants} 
-            className="mb-6 inline-block"
-            whileHover={{ 
-              scale: 1.05, 
-              transition: { duration: 0.2 } 
-            }}
-          >
-            <span className="bg-swiss-red bg-opacity-10 text-swiss-red rounded-full px-4 py-1.5 text-sm font-semibold">
-              Trusted by leading insurers technology teams
-            </span>
-          </motion.div>
           
           <motion.h1
             variants={heroItemVariants}

@@ -71,7 +71,6 @@ const Header = ({ onBookCall }) => {
                 href={`mailto:${CONTACT_EMAIL}`}
                 className="text-sm font-medium text-neutral-800 hover:text-swiss-red transition-colors duration-250"
               >
-                Contact
               </a>
             </div>
           </div>
