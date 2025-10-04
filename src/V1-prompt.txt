@@ -1,0 +1,123 @@
+Goal
+Build a minimal, elegant, ultra-clean landing page for AI Swiss Knife that copies the structure and layout of leftclick.ai’s homepage exactly (header → hero → large whitespace → marquee headline layout → CTA patterns → footer), while using original text, original assets, and Swiss color accents. No text or graphics from leftclick.ai—structure only.
+
+Brand
+
+Name: AI Swiss Knife (small red owl logomark + wordmark).
+
+Colors: --swiss-red: #E10600, --ink: #0A0A0A, --offwhite: #F7F8FA, --gray-700: #2A2E33, --gray-400: #8B9197.
+
+Typeface: Inter (or system sans). Big type, generous line height, tight tracking for display.
+
+Global rules (match leftclick.ai layout & feel)
+
+Sticky header with logo left, compact nav right, and a primary pill CTA “Let’s talk →”. Keep header height, spacing, and right-aligned CTA like leftclick.ai. 
+leftclick.ai
+
+Hero: huge single-line headline block on a soft grey abstract/blur vertical bars background (build an original SVG/Canvas). Minimal subcopy under headline. One primary CTA and optional secondary. Match padding, whitespace, and viewport height behavior. 
+leftclick.ai
+
+Section rhythm: very large margins, few words, big typography, greyscale with red accents for CTAs. Smooth scroll, subtle fade/translate on reveal.
+
+Footer: compact, left-aligned logo/tagline, right-aligned utility links; tiny legal row. 
+leftclick.ai
+
+Responsive: replicate mobile stacking and spacing.
+
+Accessibility: semantic HTML, keyboard focus rings, WCAG AA.
+
+Exact section order to replicate (homepage)
+
+Header (sticky)
+
+Logo (left).
+
+Nav (right): Case Studies, About, and a filled Let’s talk → button. Keep the same order and right-side alignment. 
+leftclick.ai
++1
+
+Hero
+
+Massive H1: AI growth partner for SMB and Insurance.
+
+Subheadline: Turn busywork into $$$ in 14 days with our Swiss presision AI workflows
+
+CTA row: Let’s talk → (primary, red), See case studies (text link).
+
+Custom abstract grey background with soft vertical gradients/bars (original asset). Keep the same airy height and centered composition. 
+leftclick.ai
+
+Oversized statement block (below the hero)
+
+One big, confident line (e.g., “Human Intelligence where is counts, AI where is works.”).
+
+Same oversized type scale and left alignment used on leftclick.ai’s first marquee line under the hero. 
+leftclick.ai
+
+Spacer/visual rhythm section
+
+Maintain the big “breathing” whitespace and subtle motion/sheen used between headline blocks. Keep it original visually, match spacing only. 
+leftclick.ai
+
+Secondary headline + micro-CTA
+
+Another short bold line followed by a minimal “Let’s talk →” text button. Align and size like leftclick.ai. 
+leftclick.ai
+
+Footer
+
+Left: logo + short one-liner.
+
+Right: links (Case Studies, About, Contact/Let’s talk), tiny legal row beneath. Match the compact, low-contrast styling. 
+leftclick.ai
+
+Note: We’re mirroring the homepage structure only. If you add internal pages later (Case Studies, About, Contact), keep the same header/nav labels and CTA naming to match leftclick.ai’s nav semantics. 
+leftclick.ai
++1
+
+Placeholders (use these now; we’ll swap later)
+
+Hero H1: “The definitive AI automation partner for fast-moving insurance teams.”
+
+Subheadline: “We design agentic workflows that remove back-office drag—so claims and underwriting move faster with audit-safe AI.”
+
+Statement block #1: “Tens of thousands of manual steps—gone. Hours back, every day.” (placeholder tone only)
+
+Secondary headline: “Audit-safe automation. Results you can measure.”
+
+Footer tagline: “Elegant AI agents for claims & underwriting.”
+
+Components & interactions (match feel, not assets)
+
+Buttons: rounded pill; primary uses Swiss red; hover slightly darker; visible focus ring.
+
+Background effect: custom grey vertical blur/bars animation (lightweight SVG/Canvas; do not import leftclick assets). 
+leftclick.ai
+
+Motion: 120–180ms fade/translate; no parallax.
+
+Cards/images: none on homepage unless needed—keep it spartan like leftclick.ai. 
+leftclick.ai
+
+Technical
+
+Build as a single page (React + Tailwind preferred; or clean HTML/CSS).
+
+SEO: title “AI Swiss Knife – Audit-safe AI for insurance”, meta description, OG tags.
+
+Performance: minimal JS; images/SVGs inline; CLS-safe font loading.
+
+CTAs
+
+Primary everywhere: Let’s talk → (opens modal with Name, Work email, Company, Message).
+
+Secondary: See case studies (anchor or future route).
+
+Legal & originality
+
+Reuse structure/section order/spacing only from leftclick.ai.
+
+Do not reuse their copy, icons, images, code, or exact background; build original equivalents.
+
+Deliverable
+A ready-to-publish landing page for AI Swiss Knife that matches leftclick.ai’s homepage structure 1:1—header → hero with abstract background → oversized marquee line → spacer → secondary headline+CTA → compact footer—while keeping all copy and visuals original and branded with Swiss red accents.

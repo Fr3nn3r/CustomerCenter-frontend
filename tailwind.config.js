@@ -7,20 +7,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        accent: '#D90429', // Swiss Red
-        'swiss-red': '#D90429',
-        neutral: {
-          50: '#FAFAFA',
-          100: '#F5F5F5', 
-          200: '#E5E5E5',
-          300: '#D4D4D4',
-          400: '#A3A3A3',
-          500: '#737373',
-          600: '#525252',  // WCAG AA compliant for body text
-          700: '#404040',  // WCAG AA compliant for headings  
-          800: '#262626',  // High contrast text
-          900: '#171717',  // Maximum contrast
-        }
+        'swiss-red': '#E10600',
+        'ink': '#0A0A0A',
+        'offwhite': '#F7F8FA',
+        'gray-700': '#2A2E33',
+        'gray-400': '#8B9197',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],

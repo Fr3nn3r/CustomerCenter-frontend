@@ -1,14 +1,14 @@
 import React from 'react';
 import { Analytics } from '@vercel/analytics/react';
-import Home from './pages/Home';
+import NewHome from './pages/NewHome';
 import GoogleAnalytics from './components/GoogleAnalytics';
-import './index.css'; // Ensure global styles are imported
+import './index.css';
 
 function App() {
   return (
     <>
       <GoogleAnalytics />
-      <Home />
+      <NewHome />
       <Analytics />
     </>
   );
