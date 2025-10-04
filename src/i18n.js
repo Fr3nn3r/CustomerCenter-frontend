@@ -11,14 +11,14 @@ const resources = {
       },
       hero: {
         headline: 'AI growth partner for SMB and Insurance',
-        subheadline: 'Turn busywork into $$$ in 14 days with our Swiss precision AI workflows',
+        subheadline: '14 days - Turn busywork into $$$ - Swiss precision AI workflows',
         primaryCTA: "Let's talk →",
         secondaryCTA: 'See case studies'
       },
       statement1: 'Human Intelligence where it matters, AI where it works.',
-      statement2: 'Audit-safe automation. Results you can measure.',
+      statement2: 'Deliver AI your way.',
       footer: {
-        tagline: 'Elegant AI agents for claims & underwriting.',
+        tagline: 'Audit-safe automation. Results you can measure.',
         contact: 'Contact',
         legal: '© 2025 AI Swiss Knife. All rights reserved.'
       },
@@ -41,15 +41,15 @@ const resources = {
         letsTalk: 'Discutons →'
       },
       hero: {
-        headline: 'Partenaire IA de croissance pour PME et Assurances',
-        subheadline: 'Transformez le travail administratif en $$$ en 14 jours avec nos workflows IA de précision suisse',
+        headline: 'Développez votre croissance avec l\'IA pour PME et Assurances',
+        subheadline: '14 jours - transformez le travail administratif en $$$ - workflows IA de précision suisse',
         primaryCTA: 'Discutons →',
         secondaryCTA: 'Voir les études de cas'
       },
       statement1: "L'intelligence humaine là où elle compte vraiment, l'IA là où elle fonctionne.",
       statement2: 'Automatisation conforme aux audits. Résultats mesurables.',
       footer: {
-        tagline: 'Agents IA élégants pour sinistres et souscription.',
+        tagline: 'L\'IA comme vous l\'entendez.',
         contact: 'Contact',
         legal: '© 2025 AI Swiss Knife. Tous droits réservés.'
       },
