@@ -10,8 +10,8 @@ const resources = {
         letsTalk: "Let's talk →"
       },
       hero: {
-        headline: 'AI growth partner for SMB and Insurance',
-        subheadline: '14 days - Turn busywork into $$$ - Swiss precision AI workflows',
+        headline: 'AI growth partner for S&M Businesses and Insurance',
+        subheadline: '14 days - Turn busywork into $$$ - Swiss precision in AI workflows',
         primaryCTA: "Let's talk →",
         secondaryCTA: 'See case studies'
       },
