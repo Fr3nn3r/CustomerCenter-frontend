@@ -15,7 +15,7 @@ const resources = {
         primaryCTA: "Let's talk →",
         secondaryCTA: 'See case studies'
       },
-      statement1: 'Human Intelligence where it counts, AI where it works.',
+      statement1: 'Human Intelligence where it matters, AI where it works.',
       statement2: 'Audit-safe automation. Results you can measure.',
       footer: {
         tagline: 'Elegant AI agents for claims & underwriting.',
@@ -46,7 +46,7 @@ const resources = {
         primaryCTA: 'Discutons →',
         secondaryCTA: 'Voir les études de cas'
       },
-      statement1: "L'intelligence humaine là où elle compte, l'IA là où elle fonctionne.",
+      statement1: "L'intelligence humaine là où elle compte vraiment, l'IA là où elle fonctionne.",
       statement2: 'Automatisation conforme aux audits. Résultats mesurables.',
       footer: {
         tagline: 'Agents IA élégants pour sinistres et souscription.',
@@ -77,7 +77,7 @@ const resources = {
         primaryCTA: 'Sprechen wir →',
         secondaryCTA: 'Fallstudien ansehen'
       },
-      statement1: 'Menschliche Intelligenz wo sie zählt, KI wo sie funktioniert.',
+      statement1: 'Menschliche Intelligenz wo sie wirklich zählt, KI wo sie funktioniert.',
       statement2: 'Audit-sichere Automatisierung. Messbare Ergebnisse.',
       footer: {
         tagline: 'Elegante KI-Agenten für Schadensfälle und Underwriting.',
@@ -108,7 +108,7 @@ const resources = {
         primaryCTA: 'Parliamone →',
         secondaryCTA: 'Vedi casi di studio'
       },
-      statement1: 'Intelligenza umana dove conta, IA dove funziona.',
+      statement1: 'Intelligenza umana dove conta davvero, IA dove funziona.',
       statement2: 'Automazione conforme agli audit. Risultati misurabili.',
       footer: {
         tagline: 'Agenti IA eleganti per sinistri e sottoscrizione.',

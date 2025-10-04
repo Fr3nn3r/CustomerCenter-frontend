@@ -36,7 +36,7 @@ const Hero = ({ onLetsTalkClick }) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl md:text-2xl text-white max-w-4xl mx-auto leading-relaxed drop-shadow-md"
+            className="text-2xl md:text-3xl text-white max-w-4xl mx-auto leading-relaxed drop-shadow-md"
           >
             {t('hero.subheadline')}
           </motion.p>
